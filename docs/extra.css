@@ -1,0 +1,79 @@
+@media screen {
+    /*
+    .wy-nav-side {
+      width: 400px;
+    }
+    .wy-nav-content-wrap {
+      margin-left: 400px;
+    }
+    */
+    .wy-nav-content {
+        max-width: 1024px;
+    }
+}
+
+html {
+    font-size: 100%;
+}
+
+hr {
+    border-top: 3px solid #e1e4e5;
+}
+
+p {
+    font-size: 100%;
+    margin-bottom: 0.5em;
+}
+
+h1, h2 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h3, h4, h5, h6 {
+    color: inherit;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+
+.rst-content li {
+  padding-bottom: 0.5em;
+}
+
+.toctree-l4 {
+    display: none !important;
+}
+
+code, div.admonition code, .rst-content tt {
+    color: #666;
+    border: none;
+}
+
+div.admonition code {
+    background: inherit;
+}
+
+pre, code, pre code, .rst-content tt, kbd, samp, pre.log {
+    font-family: courier, monospace;
+    font-size: 95%;
+}
+
+.wy-table td,
+.wy-table th,
+.rst-content table.docutils td,
+.rst-content table.field-list td,
+.rst-content table.docutils th,
+.rst-content table.field-list th {
+    font-size: 100%;
+}
+
+code.hljs {
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+div.admonition {
+    border: 1px solid #ddd;
+}
+/* vim:set sw=4 sts=4 et: */

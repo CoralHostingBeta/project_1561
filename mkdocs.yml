@@ -1,0 +1,36 @@
+site_name: 超級商城 WebService API Guide
+pages:
+    - "超級商城 WebService API Guide": index.md
+    - "概要":
+        - "使用前必讀": preface.md
+        - "使用者認證": auth.md
+        - "URI・Request・Response 格式": format.md
+        - "作業流程": workflow.md
+        - "API 流程": apiflow.md
+    - "Q & A": qna.md
+    - "API":
+        - "共通錯誤碼": api/common_errors.md
+        - "/echo": api/echo.md
+        - "MallCategory": api/MallCategory.md
+        - "StoreCategory": api/StoreCategory.md
+        - "StorePayment": api/StorePayment.md
+        - "StoreShipping": api/StoreShipping.md
+        - "Product": api/Product.md
+        - "Order": api/Order.md
+        - "OrderShipping": api/OrderShipping.md
+        - "Cancel": api/Cancel.md
+        - "Return": api/Return.md
+        - "ReturnAbnormality": api/ReturnAbnormality.md
+        - "Exchange": api/Exchange.md
+        - "Activity": api/Activity.md
+        - "Spec":
+            - "OpenApi": OpenApi.md
+            - "Swagger UI": apex_reserved_swaggerui.md
+theme: readthedocs
+theme_dir: theme
+markdown_extensions:
+    - admonition
+    - def_list
+    - grid_tables
+extra:
+    portalHostName: "https://sandbox.apex.corp.yahoo.com"

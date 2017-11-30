@@ -1,0 +1,454 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "The openApi API",
+        "version": "1",
+        "description": "Prostore Open Api"
+    },
+    "host": "waitestate.corp.ne1.yahoo.com:4080",
+    "basePath": "/api/openApi/v1",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/categories": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Returns multiple Categories with the specified ids.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "type": "string",
+                        "description": "the identity number of the category",
+                        "required": true
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "type": "string",
+                        "description": "specified to retrieve partial fields, default return all fields",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Categories"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request - if the input data is invalid",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized - if not authenticated",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden - if not authorized",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found - if the id already exists",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error - if internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    }
+                }
+            }
+        },
+        "/categories/{id}": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Returns the category with the specified id.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "the identity number of the category",
+                        "required": true
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "type": "string",
+                        "description": "specified to retrieve partial fields, default return all fields",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Category"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request - if the input data is invalid",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized - if not authenticated",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden - if not authorized",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found - if the id already exists",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error - if internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    }
+                }
+            }
+        },
+        "/categories/{id}/descendants/{depth}": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Returns descendants Categories with the specified ids.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "the identity number of the category",
+                        "required": true
+                    },
+                    {
+                        "name": "depth",
+                        "in": "path",
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "specified level of descendant to be returned 0 = all; 1 = self;",
+                        "required": true,
+                        "default": 1
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "type": "string",
+                        "description": "specified to retrieve partial fields, default return all fields",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Categories"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request - if the input data is invalid",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized - if not authenticated",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden - if not authorized",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found - if the id already exists",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error - if internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    }
+                }
+            }
+        },
+        "/categories/{id}/parents": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Return parent Categories with the specified ids.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "the identity number of the category",
+                        "required": true
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "type": "string",
+                        "description": "specified to retrieve partial fields, default return all fields",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Categories"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request - if the input data is invalid",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized - if not authenticated",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden - if not authorized",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found - if the id already exists",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error - if internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/ResourceError"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Categories": {
+            "properties": {
+                "categories": {
+                    "type": "array",
+                    "description": "A list of [Category](objects.html#Category).",
+                    "items": {
+                        "$ref": "#/definitions/Category"
+                    }
+                },
+                "nextOffset": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "If there are more items yet to be returned, this value will be present and can be used in the offset parameter to retrieve the next set of items.",
+                    "example": 0
+                },
+                "resultsTotal": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "The total number of items in all the pages.",
+                    "example": 0
+                }
+            },
+            "required": [
+                "categories",
+                "resultsTotal",
+                "nextOffset"
+            ]
+        },
+        "Category": {
+            "properties": {
+                "custAttributes": {
+                    "type": "array",
+                    "description": "A list of [CategoryAttribute](objects.html#CategoryAttribute).",
+                    "items": {
+                        "$ref": "#/definitions/CategoryAttribute"
+                    }
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "the identity number of the category",
+                    "example": 0
+                },
+                "isLeaf": {
+                    "type": "boolean",
+                    "description": "if the category is the last level of the category path.",
+                    "example": false
+                },
+                "isLink": {
+                    "type": "boolean",
+                    "description": "if the category is alias of another category.",
+                    "example": false
+                },
+                "level": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "the level of the category in the whole category tree.",
+                    "example": 0
+                },
+                "name": {
+                    "type": "string",
+                    "description": "the name of the category.",
+                    "example": ""
+                },
+                "parentId": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "the identity number of the parent category",
+                    "example": 0
+                },
+                "path": {
+                    "type": "string",
+                    "description": "the breadcrumb path to the category.",
+                    "example": ""
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "path",
+                "level",
+                "isLink",
+                "isLeaf",
+                "parentId",
+                "custAttributes"
+            ],
+            "description": "A category instance (e.g., 電腦/週邊)."
+        },
+        "CategoryAttribute": {
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "the name of the category attribute.",
+                    "example": ""
+                },
+                "value": {
+                    "type": "string",
+                    "description": "the value of the category attribute.",
+                    "example": ""
+                }
+            },
+            "required": [
+                "name",
+                "value"
+            ],
+            "description": "A category attribute instance."
+        },
+        "ParsecErrorBody": {
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "detail": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ParsecErrorDetail"
+                    }
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "message"
+            ]
+        },
+        "ParsecErrorDetail": {
+            "properties": {
+                "invalidValue": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "message"
+            ]
+        },
+        "ParsecResourceError": {
+            "properties": {
+                "error": {
+                    "$ref": "#/definitions/ParsecErrorBody"
+                }
+            },
+            "required": [
+                "error"
+            ]
+        },
+        "ResourceError": {
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code",
+                "message"
+            ]
+        }
+    }
+}

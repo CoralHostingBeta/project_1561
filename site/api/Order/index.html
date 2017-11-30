@@ -1,0 +1,4006 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-1.7.5">
+    
+    
+      
+        <title>Order - 超級商城 WebService API Guide</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-769c285a91.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="超級商城 WebService API Guide" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  API
+                </span>
+              
+            
+            Order
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    超級商城 WebService API Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="超級商城 WebService API Guide" class="md-nav__link">
+      超級商城 WebService API Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      概要
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        概要
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../preface/" title="使用前必讀" class="md-nav__link">
+      使用前必讀
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../auth/" title="使用者認證" class="md-nav__link">
+      使用者認證
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../format/" title="URI・Request・Response 格式" class="md-nav__link">
+      URI・Request・Response 格式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../workflow/" title="作業流程" class="md-nav__link">
+      作業流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apiflow/" title="API 流程" class="md-nav__link">
+      API 流程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../qna/" title="Q & A" class="md-nav__link">
+      Q & A
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common_errors/" title="共通錯誤碼" class="md-nav__link">
+      共通錯誤碼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../echo/" title="/echo" class="md-nav__link">
+      /echo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MallCategory/" title="MallCategory" class="md-nav__link">
+      MallCategory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StoreCategory/" title="StoreCategory" class="md-nav__link">
+      StoreCategory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StorePayment/" title="StorePayment" class="md-nav__link">
+      StorePayment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StoreShipping/" title="StoreShipping" class="md-nav__link">
+      StoreShipping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Product/" title="Product" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Order
+      </label>
+    
+    <a href="./" title="Order" class="md-nav__link md-nav__link--active">
+      Order
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v1orderquery" title="/v1/Order/Query" class="md-nav__link">
+    /v1/Order/Query
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1orderquerynonpayment" title="/v1/Order/QueryNonPayment" class="md-nav__link">
+    /v1/Order/QueryNonPayment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_1" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_1" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_1" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_1" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_1" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_1" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordergetstatus" title="/v1/Order/GetStatus" class="md-nav__link">
+    /v1/Order/GetStatus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_2" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_2" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_2" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_2" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_2" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_2" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordergetmaster" title="/v1/Order/GetMaster" class="md-nav__link">
+    /v1/Order/GetMaster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_3" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_3" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_3" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_3" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_3" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_3" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordergetdetail" title="/v1/Order/GetDetail" class="md-nav__link">
+    /v1/Order/GetDetail
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_4" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_4" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_4" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_4" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_4" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_4" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordercancel" title="/v1/Order/Cancel" class="md-nav__link">
+    /v1/Order/Cancel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_5" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_5" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_5" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_5" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_5" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_5" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordergetshippingsupplierlist" title="/v1/Order/GetShippingSupplierList" class="md-nav__link">
+    /v1/Order/GetShippingSupplierList
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_6" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_6" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_6" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_6" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_6" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../OrderShipping/" title="OrderShipping" class="md-nav__link">
+      OrderShipping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Cancel/" title="Cancel" class="md-nav__link">
+      Cancel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Return/" title="Return" class="md-nav__link">
+      Return
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ReturnAbnormality/" title="ReturnAbnormality" class="md-nav__link">
+      ReturnAbnormality
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exchange/" title="Exchange" class="md-nav__link">
+      Exchange
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Activity/" title="Activity" class="md-nav__link">
+      Activity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-15" type="checkbox" id="nav-4-15">
+    
+    <label class="md-nav__link" for="nav-4-15">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-15">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../OpenApi/" title="OpenApi" class="md-nav__link">
+      OpenApi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apex_reserved_swaggerui/" title="Swagger UI" class="md-nav__link">
+      Swagger UI
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v1orderquery" title="/v1/Order/Query" class="md-nav__link">
+    /v1/Order/Query
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1orderquerynonpayment" title="/v1/Order/QueryNonPayment" class="md-nav__link">
+    /v1/Order/QueryNonPayment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_1" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_1" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_1" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_1" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_1" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_1" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordergetstatus" title="/v1/Order/GetStatus" class="md-nav__link">
+    /v1/Order/GetStatus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_2" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_2" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_2" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_2" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_2" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_2" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordergetmaster" title="/v1/Order/GetMaster" class="md-nav__link">
+    /v1/Order/GetMaster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_3" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_3" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_3" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_3" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_3" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_3" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordergetdetail" title="/v1/Order/GetDetail" class="md-nav__link">
+    /v1/Order/GetDetail
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_4" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_4" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_4" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_4" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_4" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_4" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordercancel" title="/v1/Order/Cancel" class="md-nav__link">
+    /v1/Order/Cancel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_5" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_5" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_5" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_5" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_5" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_5" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1ordergetshippingsupplierlist" title="/v1/Order/GetShippingSupplierList" class="md-nav__link">
+    /v1/Order/GetShippingSupplierList
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_6" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_6" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_6" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_6" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_6" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Order</h1>
+                
+                <h2 id="v1orderquery">/v1/Order/Query</h2>
+<p>訂單查詢,可依據不同的條件查詢訂單列表</p>
+<h3 id="request-parameters">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string(20/Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單類型</p>
+<ul>
+<li>All:全部</li>
+<li>NonShipping:未出貨</li>
+<li>Shipping:已出貨</li>
+<li>NonClose:未結案</li>
+<li>Closed:已結案</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ShippingType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string(20/Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>配送方式</p>
+<ul>
+<li>HomeDelivery:宅配</li>
+<li>StoreDelivery:超商</li>
+<li>ESD:電子下載</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>DateType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string(20/Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>日期條件</p>
+<ul>
+<li>TransferDate:轉單日</li>
+<li>LastShippingDate:最晚出貨日</li>
+<li>OrderCloseDate:訂單結案日</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>StartDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>date(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>起始日期</p>
+<p>第一種格式（yyyy/mm/dd）</p>
+<p>第二種格式（yyyy/mm/dd hh:mm:ss）</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>EndDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>date(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>迄止日期</p>
+<p>第一種格式（yyyy/mm/dd）</p>
+<p>第二種格式（yyyy/mm/dd hh:mm:ss）</p>
+<p>EndDate-StartDate 要小於等於7天</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Position</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>int(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>由第幾筆開始拿資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Count</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>int(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>資料筆數</p>
+<p>Count=1~100</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request：</p>
+<pre><code>https://tw.ews.mall.yahooapis.com/stauth/v1/Order/Query?OrderType=All&amp;ShippingType=HomeDelivery&amp;DateType=TransferDate&amp;StartDate=2010/01/01&amp;EndDate=2010/01/02&amp;Position=1&amp;Count=1&amp;Format=xml
+                                   OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Order/Query?OrderType=All&amp;ShippingType=HomeDelivery&amp;DateType=TransferDate&amp;StartDate=2010/01/01&amp;EndDate=2010/01/02&amp;Position=1&amp;Count=1&amp;Format=xml
+</code></pre>
+
+<p>請注意： Order API 使用 https 通訊協定。</p>
+<h3 id="response-fields">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含符合查詢條件的Transaction List，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TotalCount</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>符合查詢條件的總資料筆數</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Transaction
+(string/15)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆Transaction的資料，屬性：</p>
+<ul>
+<li>Id ：交易序號</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Order
+(string/20)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單編號</p>
+<ul>
+<li>Id: 訂單編號</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response">Sample response</h3>
+<h4 id="json-sample">JSON sample</h4>
+<pre><code>{
+  &quot;Response&quot;: {
+    &quot;@Status&quot;: &quot;ok&quot;,
+    &quot;TransactionList&quot;: {
+      &quot;@Count&quot;: 3,
+      &quot;@TotalCount&quot;: 10,
+      &quot;Transaction&quot;: [
+        {
+          &quot;@Id&quot;: &quot;12345&quot;,
+          &quot;Order&quot;: [
+            {
+              &quot;@Id&quot;: &quot;YM1234567&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234568&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234569&quot;
+            }
+          ]
+        },
+        {
+          &quot;@Id&quot;: &quot;12346&quot;,
+          &quot;Order&quot;: [
+            {
+              &quot;@Id&quot;: &quot;YM1234511&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234512&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234513&quot;
+            }
+          ]
+        },
+        {
+          &quot;@Id&quot;: &quot;123488&quot;,
+          &quot;Order&quot;: [
+            {
+              &quot;@Id&quot;: &quot;YM1234599&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234566&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234533&quot;
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<h4 id="xml-sample">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Response Status=&quot;ok&quot;&gt;
+   &lt;TransactionList Count=&quot;3&quot; TotalCount=&quot;10&quot;&gt;
+    &lt;Transaction Id=&quot;12345&quot;&gt;
+      &lt;Order Id=&quot;YM1234567&quot;&gt;&lt;/Order&gt;
+      &lt;Order Id=&quot;YM1234568&quot;&gt;&lt;/Order&gt;
+      &lt;Order Id=&quot;YM1234569&quot;&gt;&lt;/Order&gt;
+    &lt;/Transaction&gt;
+    &lt;Transaction Id=&quot;12346&quot;&gt;
+      &lt;Order Id=&quot;YM1234511&quot;&gt;&lt;/Order&gt;
+      &lt;Order Id=&quot;YM1234512&quot;&gt;&lt;/Order&gt;
+      &lt;Order Id=&quot;YM1234513&quot;&gt;&lt;/Order&gt;
+    &lt;/Transaction&gt;
+    &lt;Transaction Id=&quot;123488&quot;&gt;
+      &lt;Order Id=&quot;YM1234599&quot;&gt;&lt;/Order&gt;
+      &lt;Order Id=&quot;YM1234566&quot;&gt;&lt;/Order&gt;
+      &lt;Order Id=&quot;YM1234533&quot;&gt;&lt;/Order&gt;
+    &lt;/Transaction&gt;
+  &lt;/TransactionList&gt;
+&lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors">Errors</h3>
+<hr />
+<h2 id="v1orderquerynonpayment">/v1/Order/QueryNonPayment</h2>
+<p>查詢未付款完成的訂單</p>
+<h3 id="request-parameters_1">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>StartOrderDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>date(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂購起始日期</p>
+<p>（yyyy/mm/dd）</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>EndOrderDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>date(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂購迄止日期</p>
+<p>（yyyy/mm/dd）</p>
+<p>EndOrderDate-StartOrderDate必須小於等於3天</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ShippingType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string
+(Require/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>配送方式</p>
+<ul>
+<li>HomeDelivery：宅配</li>
+<li>StoreDelivery：超商</li>
+<li>ESD：電子下載</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatus</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>String
+(Require/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態</p>
+<ul>
+<li>ALL:全部</li>
+<li>NEW:未結案</li>
+<li>CANCEL:取消</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Position</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>int(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>由第幾筆開始拿資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Count</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>int(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>資料筆數</p>
+<p>Count=1~100</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request：</p>
+<pre><code>https://tw.ews.mall.yahooapis.com/stauth/v1/Order/QueryNonPayment?ShippingType=HomeDelivery&amp;StartOrderDate=2010/01/01&amp;EndOrderDate=2010/01/02&amp;OrderStatus=ALL&amp;Position=1&amp;Count=1&amp;Format=xml
+                                   OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Order/QueryNonPayment?ShippingType=HomeDelivery&amp;StartOrderDate=2010/01/01&amp;EndOrderDate=2010/01/02&amp;OrderStatus=ALL&amp;Position=1&amp;Count=1&amp;Format=xml
+</code></pre>
+
+<p>請注意： Order API 使用 https 通訊協定。</p>
+<h3 id="response-fields_1">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含符合查詢條件的Transaction List，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TotalCount</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>符合查詢條件的總資料筆數</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Transaction
+(string/15)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆Transaction的資料，屬性：</p>
+<ul>
+<li>Id：交易序號</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>BuyerName
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂購人姓名
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>PayType
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>此筆交易使用的付款方式</p>
+<ul>
+<li>CreditCard：信用卡</li>
+<li>ATM：ATM</li>
+<li>StorePay：超商繳費（IBON/FAMI）</li>
+<li>StoreDelivery：超商付款取貨</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ShippingType
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>此筆交易使用的配送方式</p>
+<ul>
+<li>HomeDelivery：宅配</li>
+<li>StoreDelivery：超商</li>
+<li>ESD：ESD</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Order
+(string/20)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含ㄧ筆Order的資料，屬性：</p>
+<ul>
+<li>Id：訂單編號</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatus
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態</p>
+<ul>
+<li>NEW：未結案</li>
+<li>CANCEL：取消</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>DeliverType
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交寄方式
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderNote
+(string/150)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單備註
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatusDesc
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態描述
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂購日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderProductList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含OrderList，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Product
+ (string/16)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆訂購的商品資料，屬性：</p>
+<ul>
+<li>Id：商品編號</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>SaleType
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>SaleType</p>
+<ul>
+<li>Normal：一般方式(現貨銷售)</li>
+<li>PreSaleByShipDate：DATE 預購 by shipDate(指定出貨日期)</li>
+<li>PreSaleByShipdays：DAYS 預購 by shipdays(訂購後多少天出貨)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>CustomizedProductId
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>自訂貨號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ProductName
+(string/150)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>商品名稱
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Spec
+(string/50)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>商品規格
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Amount
+ (int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>數量
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Subtotal
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>金額小計(折扣後價格)
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response_1">Sample response</h3>
+<h4 id="json-sample_1">JSON sample</h4>
+<pre><code>{
+    &quot;Response&quot;:
+    {
+        &quot;@Status&quot;:&quot;ok&quot;,
+        &quot;TransactionList&quot;:
+        {
+            &quot;@Count&quot;:2,
+            &quot;@TotalCount&quot;:10,
+            &quot;Transaction&quot;:
+            [
+                {
+                    &quot;@Id&quot;:&quot;5473347&quot;,
+                    &quot;_BuyerName&quot;:&quot;\u6e38\u6587\u516d&quot;,
+                    &quot;PayType&quot;:&quot;StorePay(FAMI)&quot;,
+                    &quot;ShippingType&quot;:&quot;HomeDelivery&quot;,
+                    &quot;OrderList&quot;:
+                    [
+                        {
+                            &quot;Order&quot;:
+                            [
+                                {
+                                    &quot;@Id&quot;:&quot;YM1008020000007&quot;,
+                                    &quot;OrderStatus&quot;:&quot;NEW&quot;,
+                                    &quot;_OrderStatusDesc&quot;:&quot;\u672a\u7d50\u6848&quot;,
+                                    &quot;OrderDate&quot;:&quot;1900/01/01&quot;,
+                                    &quot;OrderProductList&quot;:
+                                    {
+                                         &quot;@Count&quot;:&quot;1&quot;,
+                                         &quot;Product&quot;:
+                                         [
+                                             {
+                                                 &quot;@Id&quot;:&quot;1020623&quot;,
+                                                 &quot;SaleType&quot;:&quot;Normal&quot;,
+                                                 &quot;_CustomizedProductId&quot;:&quot;&quot;,
+                                                 &quot;_ProductName&quot;:&quot;\u7269\u6d41\u670d\u52d9\u8cbb&quot;,
+                                                 &quot;_Spec&quot;:&quot;&quot;,
+                                                 &quot;Amount&quot;:&quot;1&quot;,
+                                                 &quot;Subtotal&quot;:&quot;80&quot;
+                                             }
+                                         ]
+                                    }
+                                },
+                                {
+                                    &quot;@Id&quot;:&quot;YM1008020000008&quot;,
+                                    &quot;OrderStatus&quot;:&quot;NEW&quot;,
+                                    &quot;_OrderStatusDesc&quot;:&quot;\u672a\u7d50\u6848&quot;,
+                                    &quot;OrderDate&quot;:&quot;1900/01/01&quot;,
+                                    &quot;OrderProductList&quot;:
+                                    {
+                                        &quot;Product&quot;:
+                                        [
+                                            {
+                                                &quot;@Id&quot;:&quot;100_1&quot;,
+                                                &quot;SaleType&quot;:&quot;Normal&quot;,
+                                                &quot;_CustomizedProductId&quot;:&quot;A0001\u4e3b\u4ef6100_1&quot;,
+                                                &quot;_ProductName&quot;:&quot;\u4e3b\u4ef6\u4e00&quot;,
+                                                &quot;_Spec&quot;:&quot;&quot;,
+                                                &quot;Amount&quot;:&quot;2&quot;,
+                                                &quot;Subtotal&quot;:&quot;1590&quot;
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    &quot;@Id&quot;:&quot;5473348&quot;,
+                    &quot;_BuyerName&quot;:&quot;\u6e38\u6587\u516d&quot;,
+                    &quot;PayType&quot;:&quot;CreditCard&quot;,
+                    &quot;ShippingType&quot;:&quot;HomeDelivery&quot;,
+                    &quot;OrderList&quot;:
+                    [
+                        {
+                            &quot;Order&quot;:
+                            [
+                                {
+                                    &quot;@Id&quot;:&quot;YM1008020000007&quot;,
+                                    &quot;OrderStatus&quot;:&quot;NEW&quot;,
+                                    &quot;_OrderStatusDesc&quot;:&quot;\u672a\u7d50\u6848&quot;,
+                                    &quot;OrderDate&quot;:&quot;1900/01/01&quot;,
+                                    &quot;OrderProductList&quot;:
+                                    {
+                                        &quot;@Count&quot;:&quot;1&quot;,
+                                        &quot;Product&quot;:
+                                        [
+                                            {
+                                                &quot;@Id&quot;:&quot;1020623&quot;,
+                                                &quot;SaleType&quot;:&quot;Normal&quot;,
+                                                &quot;_CustomizedProductId&quot;:&quot;&quot;,
+                                                &quot;_ProductName&quot;:&quot;\u7269\u6d41\u670d\u52d9\u8cbb&quot;,
+                                                &quot;_Spec&quot;:&quot;&quot;,
+                                                &quot;Amount&quot;:&quot;1&quot;,
+                                                &quot;Subtotal&quot;:&quot;80&quot;
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    &quot;@Id&quot;:&quot;YM1008020000009&quot;,
+                                    &quot;OrderStatus&quot;:&quot;Cancel&quot;,
+                                    &quot;_OrderStatusDesc&quot;:&quot;\u53d6\u6d88-\u5584\u610f-\u4e0d\u7f70&quot;,
+                                    &quot;OrderDate&quot;:&quot;1900/01/01&quot;,
+                                    &quot;OrderProductList&quot;:
+                                    {
+                                        &quot;Product&quot;:
+                                        [
+                                            {
+                                                &quot;@Id&quot;:&quot;1020623&quot;,
+                                                &quot;SaleType&quot;:&quot;Normal&quot;,
+                                                &quot;_CustomizedProductId&quot;:&quot;&quot;,
+                                                &quot;_ProductName&quot;:&quot;\u7269\u6d41\u670d\u52d9\u8cbb&quot;,
+                                                &quot;_Spec&quot;:&quot;&quot;,
+                                                &quot;Amount&quot;:&quot;1&quot;,
+                                                &quot;Subtotal&quot;:&quot;80&quot;
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    &quot;@Id&quot;:&quot;YM1008020000010&quot;,
+                                    &quot;OrderStatus&quot;:&quot;CANCEL&quot;,
+                                    &quot;_OrderStatusDesc&quot;:&quot;\u53d6\u6d88-\u5584\u610f-\u4e0d\u7f70&quot;,
+                                    &quot;OrderDate&quot;:&quot;1900/01/01&quot;,
+                                    &quot;OrderProductList&quot;:
+                                    {&quot;Product&quot;:
+                                        [
+                                            {
+                                                &quot;@Id&quot;:&quot;100_1&quot;,
+                                                &quot;SaleType&quot;:&quot;Normal&quot;,
+                                                &quot;_CustomizedProductId&quot;:&quot;A0001\u4e3b\u4ef6100_1&quot;,
+                                                &quot;_ProductName&quot;:&quot;\u4e3b\u4ef6\u4e00&quot;,
+                                                &quot;_Spec&quot;:&quot;&quot;,
+                                                &quot;Amount&quot;:&quot;2&quot;,
+                                                &quot;Subtotal&quot;:&quot;1590&quot;
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+
+<h4 id="xml-sample_1">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Response Status=&quot;ok&quot;&gt;
+  &lt;TransactionList Count=&quot;2&quot; TotalCount=&quot;10&quot;&gt;
+    &lt;Transaction Id=&quot;5473347&quot;&gt;
+      &lt;BuyerName&gt;&lt;![CDATA[游文六]]&gt;&lt;/BuyerName&gt;
+      &lt;PayType&gt;StorePay(FAMI)&lt;/PayType&gt;
+      &lt;ShippingType&gt;HomeDelivery&lt;/ShippingType&gt;
+      &lt;OrderList&gt;
+        &lt;Order Id=&quot;YM1008020000007&quot;&gt;
+          &lt;OrderStatus&gt;NEW&lt;/OrderStatus&gt;
+          &lt;OrderStatusDesc&gt;&lt;![CDATA[未結案]]&gt;&lt;/OrderStatusDesc&gt;
+          &lt;OrderDate&gt;1900/01/01&lt;/OrderDate&gt;
+          &lt;OrderProductList Count=&quot;1&quot;&gt;
+            &lt;Product Id=&quot;1020623&quot;&gt;
+              &lt;SaleType&gt;Normal&lt;/SaleType&gt;
+              &lt;CustomizedProductId&gt;&lt;![CDATA[]]&gt;&lt;/CustomizedProductId&gt;
+              &lt;ProductName&gt;&lt;![CDATA[物流服務費]]&gt;&lt;/ProductName&gt;
+              &lt;Spec&gt;&lt;![CDATA[]]&gt;&lt;/Spec&gt;
+              &lt;Amount&gt;1&lt;/Amount&gt;
+              &lt;Subtotal&gt;80&lt;/Subtotal&gt;
+            &lt;/Product&gt;
+          &lt;/OrderProductList&gt;
+        &lt;/Order&gt;
+        &lt;Order Id=&quot;YM1008020000008&quot;&gt;
+          &lt;OrderStatus&gt;NEW&lt;/OrderStatus&gt;
+          &lt;OrderStatusDesc&gt;&lt;![CDATA[未結案]]&gt;&lt;/OrderStatusDesc&gt;
+          &lt;OrderDate&gt;1900/01/01&lt;/OrderDate&gt;
+          &lt;OrderProductList&gt;
+            &lt;Product Id=&quot;100_1&quot;&gt;
+              &lt;SaleType&gt;Normal&lt;/SaleType&gt;
+              &lt;CustomizedProductId&gt;&lt;![CDATA[A0001主件100_1]]&gt;&lt;/CustomizedProductId&gt;
+              &lt;ProductName&gt;&lt;![CDATA[主件一]]&gt;&lt;/ProductName&gt;
+              &lt;Spec&gt;&lt;![CDATA[]]&gt;&lt;/Spec&gt;
+              &lt;Amount&gt;2&lt;/Amount&gt;
+              &lt;Subtotal&gt;1590&lt;/Subtotal&gt;
+            &lt;/Product&gt;
+          &lt;/OrderProductList&gt;
+        &lt;/Order&gt;
+      &lt;/OrderList&gt;
+    &lt;/Transaction&gt;
+    &lt;Transaction Id=&quot;5473348&quot;&gt;
+      &lt;BuyerName&gt;&lt;![CDATA[游文六]]&gt;&lt;/BuyerName&gt;
+      &lt;PayType&gt;CreditCard&lt;/PayType&gt;
+      &lt;ShippingType&gt;HomeDelivery&lt;/ShippingType&gt;
+      &lt;OrderList&gt;
+        &lt;Order Id=&quot;YM1008020000007&quot;&gt;
+          &lt;OrderStatus&gt;NEW&lt;/OrderStatus&gt;
+          &lt;OrderStatusDesc&gt;&lt;![CDATA[未結案]]&gt;&lt;/OrderStatusDesc&gt;
+          &lt;OrderDate&gt;1900/01/01&lt;/OrderDate&gt;
+          &lt;OrderProductList Count=&quot;1&quot;&gt;
+            &lt;Product Id=&quot;1020623&quot;&gt;
+              &lt;SaleType&gt;Normal&lt;/SaleType&gt;
+              &lt;CustomizedProductId&gt;&lt;![CDATA[]]&gt;&lt;/CustomizedProductId&gt;
+              &lt;ProductName&gt;&lt;![CDATA[物流服務費]]&gt;&lt;/ProductName&gt;
+              &lt;Spec&gt;&lt;![CDATA[]]&gt;&lt;/Spec&gt;
+              &lt;Amount&gt;1&lt;/Amount&gt;
+              &lt;Subtotal&gt;80&lt;/Subtotal&gt;
+            &lt;/Product&gt;
+          &lt;/OrderProductList&gt;
+        &lt;/Order&gt;
+        &lt;Order Id=&quot;YM1008020000009&quot;&gt;
+          &lt;OrderStatus&gt;Cancel&lt;/OrderStatus&gt;
+          &lt;OrderStatusDesc&gt;
+            &lt;![CDATA[取消-善意-不罰]]&gt;
+            &lt;/OrderStatusDesc&gt;
+          &lt;OrderDate&gt;1900/01/01&lt;/OrderDate&gt;
+          &lt;OrderProductList&gt;
+            &lt;Product Id=&quot;1020623&quot;&gt;
+              &lt;SaleType&gt;Normal&lt;/SaleType&gt;
+              &lt;CustomizedProductId&gt;
+                &lt;![CDATA[]]&gt;
+                &lt;/CustomizedProductId&gt;
+              &lt;ProductName&gt;
+                &lt;![CDATA[物流服務費]]&gt;
+                &lt;/ProductName&gt;
+              &lt;Spec&gt;
+                &lt;![CDATA[]]&gt;
+                &lt;/Spec&gt;
+              &lt;Amount&gt;1&lt;/Amount&gt;
+              &lt;Subtotal&gt;80&lt;/Subtotal&gt;
+            &lt;/Product&gt;
+          &lt;/OrderProductList&gt;
+        &lt;/Order&gt;
+        &lt;Order Id=&quot;YM1008020000010&quot;&gt;
+          &lt;OrderStatus&gt;CANCEL&lt;/OrderStatus&gt;
+          &lt;OrderStatusDesc&gt;&lt;![CDATA[取消-善意-不罰]]&gt;&lt;/OrderStatusDesc&gt;
+          &lt;OrderDate&gt;1900/01/01&lt;/OrderDate&gt;
+          &lt;OrderProductList&gt;
+            &lt;Product Id=&quot;100_1&quot;&gt;
+              &lt;SaleType&gt;Normal&lt;/SaleType&gt;
+              &lt;CustomizedProductId&gt;&lt;![CDATA[A0001主件100_1]]&gt;&lt;/CustomizedProductId&gt;
+              &lt;ProductName&gt;&lt;![CDATA[主件一]]&gt;&lt;/ProductName&gt;
+              &lt;Spec&gt;&lt;![CDATA[]]&gt;&lt;/Spec&gt;
+              &lt;Amount&gt;2&lt;/Amount&gt;
+              &lt;Subtotal&gt;1590&lt;/Subtotal&gt;
+            &lt;/Product&gt;
+          &lt;/OrderProductList&gt;
+        &lt;/Order&gt;
+      &lt;/OrderList&gt;
+    &lt;/Transaction&gt;
+  &lt;/TransactionList&gt;
+&lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors_1">Errors</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>ErrorCode</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>ErrorMessage</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2101</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>為物流處理費</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2102</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單非未出貨狀態</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2103</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>非宅配訂單</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2109</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>無資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2110</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>物流商代碼不存在</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>其他錯誤請參閱<a href="../common_errors/">共用錯誤表</a></p>
+<hr />
+<h2 id="v1ordergetstatus">/v1/Order/GetStatus</h2>
+<p>查詢訂單狀態</p>
+<h3 id="request-parameters_2">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionId
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string
+(Require/15)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交易序號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderId</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string
+(Require/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單編號</p>
+<p>一次可select同一個TransactionId下的多個OrderId，最大接受100個</p>
+<p>ex：TransactionId=23000&amp;OrderId=2300001&amp;OrderId=2300002</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request：</p>
+<pre><code>https://tw.ews.mall.yahooapis.com/stauth/v1/Order/GetStatus?TransactionId=23000&amp;OrderId=2300001&amp;OrderId=2300002&amp;Format=xml
+                                   OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Order/GetStatus?TransactionId=23000&amp;OrderId=2300001&amp;OrderId=2300002&amp;Format=xml
+</code></pre>
+
+<p>請注意： Order API 使用 https 通訊協定。</p>
+<h3 id="response-fields_2">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Transaction
+(string/15)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交易序號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>SuccessList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含成功的Order資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含Order List，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Order
+(string/20)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆Order的資料，屬性：</p>
+<ul>
+<li>Id：訂單編號</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatus
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態</p>
+<ul>
+<li>NEW:未結案</li>
+<li>CANCEL:取消</li>
+<li>SHIPPED:完成出貨</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatusDesc
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態描述
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>FailList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含失敗的Order資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含Order List，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Order
+(string/20)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆Order的資料，屬性：</p>
+<ul>
+<li>Id：訂單編號</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response_2">Sample response</h3>
+<h4 id="json-sample_2">JSON sample</h4>
+<pre><code>{
+  &quot;Response&quot;: {
+    &quot;@Status&quot;: &quot;ok&quot;,
+    &quot;Transaction&quot;: {
+      &quot;@Id&quot;: 123456,
+      &quot;FailList&quot;: {
+        &quot;@Count&quot;: 3,
+        &quot;OrderList&quot;: {
+         &quot;Order&quot;: [
+            {
+              &quot;@Id&quot;: &quot;YM1234577&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234588&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234599&quot;
+            }
+          ]
+        }
+      },
+      &quot;SuccessList&quot;: {
+        &quot;@Count&quot;: 3,
+        &quot;OrderList&quot;: {
+          &quot;Order&quot;: [
+            {
+              &quot;@Id&quot;: &quot;YM1234567&quot;,
+               &quot;OrderStatus&quot;: &quot;NEW&quot;,
+               &quot;OrderStatusDesc&quot;: &quot;未結案&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234568&quot;, 
+              &quot;OrderStatus&quot;: &quot;SHIPPED&quot;,
+              &quot;OrderStatusDesc&quot;: &quot;完成出貨&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234569&quot;,
+               &quot;OrderStatus&quot;: &quot;CANCEL&quot;,
+               &quot;OrderStatusDesc&quot;: &quot;取消-缺貨&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234560&quot;,
+               &quot;OrderStatus&quot;: &quot;CANCEL&quot;,
+               &quot;OrderStatusDesc&quot;: &quot;取消-門市刷退&quot;
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+<h4 id="xml-sample_2">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Response Status=&quot;ok&quot;&gt;
+      &lt;Transaction Id=&quot;123456&quot;&gt;
+            &lt;SuccessList Count=&quot;3&quot;&gt;
+                  &lt;OrderList&gt;
+                        &lt;Order Id=&quot;YM1234567&quot;&gt;
+                            &lt;OrderStatus&gt;NEW&lt;/OrderStatus&gt;
+                            &lt;OrderStatusDesc&gt;未結案&lt;/OrderStatusDesc&gt;
+                        &lt;/Order&gt;
+                        &lt;Order Id=&quot;YM1234568&quot;&gt;                                
+                            &lt;OrderStatus&gt;SHIPPED&lt;/OrderStatus&gt;
+                            &lt;OrderStatusDesc&gt;完成出貨&lt;/OrderStatusDesc&gt;
+                        &lt;/Order&gt;
+                        &lt;Order Id=&quot;YM1234569&quot;&gt;
+                             &lt;OrderStatus&gt;CANCEL&lt;/OrderStatus&gt;
+                             &lt;OrderStatusDesc&gt;取消-缺貨&lt;/OrderStatusDesc&gt;
+                        &lt;/Order&gt;
+                        &lt;Order Id=&quot;YM1234560&quot;&gt;
+                             &lt;OrderStatus&gt;CANCEL&lt;/OrderStatus&gt;
+                             &lt;OrderStatusDesc&gt;取消-門市刷退&lt;/OrderStatusDesc&gt;
+                        &lt;/Order&gt;
+                  &lt;/OrderList&gt;
+            &lt;/SuccessList&gt;
+            &lt;FailList Count=&quot;3&quot;&gt;
+                  &lt;OrderList&gt;
+                        &lt;Order Id=&quot;YM1234577&quot;&gt;&lt;/Order&gt;
+                        &lt;Order Id=&quot;YM1234588&quot;&gt;&lt;/Order&gt;
+                        &lt;Order Id=&quot;YM1234599&quot;&gt;&lt;/Order&gt;
+                  &lt;/OrderList&gt;
+            &lt;/FailList&gt;
+      &lt;/Transaction&gt;
+&lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors_2">Errors</h3>
+<hr />
+<h2 id="v1ordergetmaster">/v1/Order/GetMaster</h2>
+<p>取得購物車資料</p>
+<h3 id="request-parameters_3">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionId
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string (Require)
+(Require/15)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交易序號
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request：</p>
+<pre><code>https://tw.ews.mall.yahooapis.com/stauth/v1/Order/GetMaster?TransactionId=21410239&amp;Format=xml
+                                   OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Order/GetMaster?TransactionId=21410239&amp;Format=xml
+</code></pre>
+
+<p>請注意： Order API 使用 https 通訊協定。</p>
+<h3 id="response-fields_3">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionId
+(string/15)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交易序號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>BuyerName
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂購人姓名
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>BuyerPhone
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂購人電話
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>IsActivity</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>此筆交易是否有符合活動</p>
+<ul>
+<li>有活動：Yes</li>
+<li>無活動：No</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>IsUseCoupon</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>此筆交易是否有使用電子折價券</p>
+<ul>
+<li>有使用：Yes</li>
+<li>未使用：No</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>PayType
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>此筆交易使用的付款方式</p>
+<ul>
+<li>CreditCard:信用卡</li>
+<li>ATM:ATM</li>
+<li>StorePay:超商繳費(IBON/FAMI)</li>
+<li>StoreDelivery:超商付款取貨</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Installment
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>分期期數
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ShippingType
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>此筆交易使用的配送方式</p>
+<ul>
+<li>HomeDelivery：宅配</li>
+<li>StoreDelivery：超商</li>
+<li>ESD：ESD</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>StoreType
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>超商種類</p>
+<p>當ShippingType=StoreDelivery時，此欄位才有值</p>
+<ul>
+<li>7-11：7-11(統一超商)</li>
+<li>Family：全家超商</li>
+<li>HiLife：萊爾富超商</li>
+<li>None：未使用超商</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>StoreShippingType
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>物流方式(由商店設定供Buyer使用的物流方式)
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionRemark
+(string/150)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>此筆交易的備註
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionPrice
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>此筆交易的總金額
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含此筆交易的Order List，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Order
+(string/20)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆Order的資料，屬性：</p>
+<ul>
+<li>Id：訂單編號</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatus
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態</p>
+<ul>
+<li>NEW:未結案</li>
+<li>CANCEL:取消</li>
+<li>SHIPPED:完成出貨</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatusDesc
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態描述
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderCloseDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單結案日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderPackageDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包裝確認日</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response_3">Sample response</h3>
+<h4 id="json-sample_3">JSON sample</h4>
+<pre><code>{
+  &quot;Response&quot;: {
+    &quot;@Status&quot;: &quot;ok&quot;,
+    &quot;Transaction&quot;: {
+      &quot;@Id&quot;: 123456,
+      &quot;IsActivity&quot;: &quot;Yes&quot;,
+      &quot;IsUseCoupon&quot;: &quot;Yes&quot;,
+      &quot;OrderList&quot;: {
+        &quot;Order&quot;: [
+          {
+            &quot;@Id&quot;: &quot;YM1511020082582&quot;,
+            &quot;OrderCloseDate&quot;: &quot;2010/11/12&quot;,
+            &quot;OrderPackageDate&quot;: &quot;2010/11/11&quot;,
+            &quot;OrderStatus&quot;: &quot;NEW&quot;,
+            &quot;OrderStatusDesc&quot;: &quot;未結案&quot;
+          },
+          {
+            &quot;@Id&quot;: &quot;YM1511020082582&quot;,
+            &quot;OrderCloseDate&quot;: &quot;2010/11/12&quot;,
+            &quot;OrderPackageDate&quot;: &quot;2010/11/11&quot;,
+            &quot;OrderStatus&quot;: &quot;SHIPPED&quot;,
+            &quot;OrderStatusDesc&quot;: &quot;完成出貨&quot;
+          },
+          {
+            &quot;@Id&quot;: &quot;YM1511020082583&quot;,
+            &quot;OrderCloseDate&quot;: &quot;2010/11/12&quot;,
+            &quot;OrderPackageDate&quot;: &quot;2010/11/11&quot;,
+            &quot;OrderStatus&quot;: &quot;Cancel&quot;,
+            &quot;OrderStatusDesc&quot;: &quot;取消-缺貨&quot;
+          }
+        ]
+      },
+      &quot;PayType&quot;: &quot;CreditCard&quot;,
+      &quot;Installment&quot;: &quot;6&quot;,
+      &quot;ShippingType&quot;: &quot;HomeDelivery&quot;,
+      &quot;StoreType&quot;: &quot;None&quot;,
+      &quot;TransactionPrice&quot;: 300,
+      &quot;_BuyerName&quot;: &quot;\u9673\u7f8e\u7f8e&quot;,
+      &quot;_BuyerPhone&quot;: &quot;0911111111&quot;,
+      &quot;_TransactionRemark&quot;: &quot;\u8acb\u8ddf\u6211\u806f\u7d61&quot;
+    }
+  }
+}
+</code></pre>
+
+<h4 id="xml-sample_3">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Response Status=&quot;ok&quot;&gt;
+      &lt;Transaction Id=&quot;123456&quot;&gt;
+            &lt;OrderList&gt;
+                  &lt;Order Id=&quot;YM1511020082511&quot;&gt;
+                        &lt;OrderStatus&gt;NEW&lt;/OrderStatus&gt;
+                        &lt;OrderStatusDesc&gt;未結案&lt;/OrderStatusDesc&gt;
+                        &lt;OrderCloseDate&gt;2010/11/12&lt;/OrderCloseDate&gt;
+                        &lt;OrderPackageDate&gt;2010/11/11&lt;/OrderPackageDate&gt;
+                  &lt;/Order&gt;
+                  &lt;Order Id=&quot;YM1511020082512&quot;&gt;
+                        &lt;OrderStatus&gt;SHIPPED&lt;/OrderStatus&gt;
+                        &lt;OrderStatusDesc&gt;完成出貨&lt;/OrderStatusDesc&gt;
+                        &lt;OrderCloseDate&gt;2010/11/12&lt;/OrderCloseDate&gt;
+                        &lt;OrderPackageDate&gt;2010/11/11&lt;/OrderPackageDate&gt;
+                  &lt;/Order&gt;
+                  &lt;Order Id=&quot;YM1511020082513&quot;&gt;                        
+                        &lt;OrderStatus&gt;CANCEL&lt;/OrderStatus&gt;
+                        &lt;OrderStatusDesc&gt;取消-缺貨&lt;/OrderStatusDesc&gt;
+                        &lt;OrderCloseDate&gt;2010/11/12&lt;/OrderCloseDate&gt;
+                        &lt;OrderPackageDate&gt;2010/11/11&lt;/OrderPackageDate&gt;
+                  &lt;/Order&gt;
+            &lt;/OrderList&gt;
+            &lt;BuyerName&gt;
+                  &lt;![CDATA[陳美美]]&gt;
+            &lt;/BuyerName&gt;
+            &lt;BuyerPhone&gt;
+                  &lt;![CDATA[0911111111]]&gt;
+            &lt;/BuyerPhone&gt;
+            &lt;IsActivity&gt;Yes&lt;/IsActivity&gt;
+            &lt;IsUseCoupon&gt;Yes&lt;/IsUseCoupon&gt;
+            &lt;PayType&gt;CreditCard&lt;/PayType&gt;
+            &lt;Installment&gt;6&lt;/Installment&gt;
+            &lt;ShippingType&gt;HomeDelivery&lt;/ShippingType&gt;
+            &lt;StoreType&gt;None&lt;/StoreType&gt;
+            &lt;TransactionRemark&gt;
+                  &lt;![CDATA[請跟我聯絡]]&gt;
+            &lt;/TransactionRemark&gt;
+            &lt;TransactionPrice&gt;300&lt;/TransactionPrice&gt;
+      &lt;/Transaction&gt;
+&lt;/Response&gt;&gt;
+</code></pre>
+
+<h3 id="errors_3">Errors</h3>
+<hr />
+<h2 id="v1ordergetdetail">/v1/Order/GetDetail</h2>
+<p>取得購物車中訂單明細資料</p>
+<h3 id="request-parameters_4">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionId
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string
+ (Require/15)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交易序號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderId</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string
+(Require/20</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單編號</p>
+<p>一次可select同一個TransactionId下的多個OrderId，最大接受100個</p>
+<p>ex：TransactionId=23000&amp;OrderId=2300001&amp;OrderId=2300002</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request：</p>
+<pre><code>https://tw.ews.mall.yahooapis.com/stauth/v1/Order/GetDetail?TransactionId=21410239&amp;OrderId=2300001&amp;OrderId=2300002&amp;Format=xml
+                                   OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Order/GetDetail?TransactionId=21410239&amp;OrderId=2300001&amp;OrderId=2300002&amp;Format=xml
+</code></pre>
+
+<p>請注意： Order API 使用 https 通訊協定。</p>
+<h3 id="response-fields_4">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionId
+(string/15)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交易序號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Receiver</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含此筆交易的收件者資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ReceiverName
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>收件者姓名
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ReceiverPhone
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>收件者電話
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ReceiverMobile
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>收件者手機
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ReceiverZipcode
+(string/5)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>收件者郵遞區號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ReceiverAddress
+(string/150)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>收件者地址
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>SuccessList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含成功的Order資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含Order List，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Order
+(string/20)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆Order的資料，屬性：</p>
+<ul>
+<li>Id：訂單編號</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatus
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態</p>
+<ul>
+<li>NEW:未結案</li>
+<li>CANCEL:取消</li>
+<li>SHIPPED:完成出貨</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderStatusDesc
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單狀態描述
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransferDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>轉單日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>LastShippingDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>最晚出貨日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderShippingDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>店家出貨日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderCloseDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單結案日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>BuyerConfirmDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>買家確認日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>EntryAccountDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>入帳日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>PickingDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>揀貨日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderPackageDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包裝確認日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>LastDeliveryDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>最晚送貨日</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderShippingId
+(string/25)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>出貨單號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>InvoiceNo
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>發票號碼
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>InvoiceDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>發票日期</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>DeliverType
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交寄方式
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderNote
+(string/150)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單備註
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderProductList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含此筆訂單的Order Product  List，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Product
+(string/16)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆訂購的商品資料，屬性：</p>
+<ul>
+<li>Id：商品編號</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ProductType
+(string/10)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>商品型態</p>
+<ul>
+<li>Main：主商品</li>
+<li>Addon：加購品</li>
+<li>Freebie：贈品</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>SaleType
+(string/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>SaleType</p>
+<ul>
+<li>Normal：一般方式(現貨銷售)</li>
+<li>PreSaleByShipDate：DATE 預購 by shipDate(指定出貨日期)</li>
+<li>PreSaleByShipdays：DAYS 預購 by shipdays(訂購後多少天出貨)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>CustomizedProductId
+(string/30)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>自定貨號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ProductName
+(string/150)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>商品名稱</p>
+<p>注意:當ProductName=物流服務費,此訂單不需要執行出貨確認</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Spec
+(string/50)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>商品規格
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Amount
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>數量
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OriginalPrice
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>購物車內商品單價
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ListPrice
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>商品頁銷售價格
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>UsedPoint
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>超贈點點數
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>BasicPointDiscount
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>超贈點折抵金額
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Subtotal
+(int)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>金額小計(折扣後的價格)
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TaxType
+(string/10)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>稅別</p>
+<ul>
+<li>Taxable：應稅</li>
+<li>TaxFree：免稅</li>
+<li>NoInv：免發票</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>FailList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含失敗的Order資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含Order List，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Order
+(string/20)
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆Order的資料，屬性：</p>
+<ul>
+<li>Id：訂單編號</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response_4">Sample response</h3>
+<h4 id="json-sample_4">JSON sample</h4>
+<pre><code>{
+  &quot;Response&quot;: {
+    &quot;@Status&quot;: &quot;ok&quot;,
+    &quot;Transaction&quot;: {
+     &quot;@Id&quot;: 123456,
+      &quot;Receiver&quot;: {
+        &quot;_ReceiverAddress&quot;: &quot;\u53f0\u5317\u5e02\u58eb\u6797\u5340\u6587\u5316\u8def1\u865f&quot;,
+        &quot;_ReceiverMobile&quot;: &quot;0911111111&quot;,
+        &quot;_ReceiverName&quot;: &quot;\u9673\u7f8e\u7f8e&quot;,
+        &quot;_ReceiverPhone&quot;: &quot;02-22222222&quot;,
+        &quot;_ReceiverZipcode&quot;: &quot;100&quot;
+      },
+      &quot;SuccessList&quot;: {
+        &quot;OrderList&quot;: {
+          &quot;@Count&quot;: 2,
+          &quot;Order&quot;: [
+            {
+              &quot;@Id&quot;: &quot;YM1234577&quot;,
+              &quot;BuyerConfirmDate&quot;: &quot;2010/11/15&quot;,
+              &quot;OrderCloseDate&quot;: &quot;2010/11/16&quot;,
+              &quot;EntryAccountDate&quot;: &quot;2010/11/15&quot;,
+              &quot;LastShippingDate&quot;: &quot;2010/11/15&quot;,
+              &quot;InvoiceNo&quot;: &quot;WE92904105&quot;,
+              &quot;InvoiveDate&quot;: &quot;2010/11/15&quot;,
+              &quot;OrderProductList&quot;: {
+                &quot;Product&quot;: [
+                  {
+                    &quot;@Id&quot;: &quot;p2345677&quot;,
+                    &quot;Amount&quot;: 2,
+                    &quot;OriginalPrice&quot;: 52000,
+                    &quot;ListPrice&quot;: 52000,
+                    &quot;UsedPoint&quot;, 0,
+                    &quot;BasicPointDiscount&quot;, 0,
+                    &quot;Subtotal&quot;: &quot;52000&quot;,
+                    &quot;TaxType&quot;: &quot;Taxable&quot;,
+                    &quot;ProductType&quot;: &quot;Main&quot;,
+                    &quot;_CustomizedProductId&quot;: &quot;A123456&quot;,
+                    &quot;_ProductName&quot;: &quot;iphone 4 \u5168\u914d&quot;,
+                    &quot;_Spec&quot;: &quot;\u9ed1\u8272&quot;
+                  },
+                  {
+                    &quot;@Id&quot;: &quot;p23456799&quot;,
+                    &quot;Amount&quot;: 2,
+                    &quot;OriginalPrice&quot;: 0,
+                    &quot;ListPrice&quot;: 0,
+                    &quot;UsedPoint&quot;, 0,
+                    &quot;BasicPointDiscount&quot;, 0,
+                    &quot;Subtotal&quot;: &quot;0&quot;,
+                    &quot;TaxType&quot;: &quot;TaxFree&quot;,
+                    &quot;ProductType&quot;: &quot;Main&quot;,
+                    &quot;_CustomizedProductId&quot;: &quot;&quot;,
+                    &quot;_ProductName&quot;: &quot;iphone 4 \u76ae\u5957&quot;,
+                    &quot;_Spec&quot;: &quot;\u767d\u8272&quot;
+                  }
+                ]
+              },
+              &quot;OrderPackageDate&quot;: &quot;2010/11/14&quot;,
+              &quot;OrderShippingDate&quot;: &quot;2010/11/14&quot;,
+              &quot;_OrderShippingId&quot;: &quot;X123456&quot;,
+              &quot;PickingDate&quot;: &quot;2010/11/14&quot;,
+              &quot;TransferDate&quot;: &quot;2010/11/11&quot;,
+              &quot;_DeliverType&quot;: &quot;自行運送(99)&quot;,
+              &quot;_OrderNote&quot;: &quot;請在03/0803/08早上到貨&quot;,
+              &quot;_OrderStatus&quot;: &quot;NEW&quot;,
+              &quot;_OrderStatusDesc&quot;: &quot;未結案&quot;
+            },
+            {
+              &quot;@Id&quot;: &quot;YM1234588&quot;,
+              &quot;BuyerConfirmDate&quot;: &quot;2010/11/15&quot;,
+              &quot;OrderCloseDate&quot;: &quot;2010/11/16&quot;,
+              &quot;EntryAccountDate&quot;: &quot;2010/11/15&quot;,
+              &quot;LastShippingDate&quot;: &quot;2010/11/15&quot;,
+              &quot;InvoiceNo&quot;: &quot;WE92904106&quot;,
+              &quot;InvoiveDate&quot;: &quot;2010/11/15&quot;,
+              &quot;OrderProductList&quot;: {
+                &quot;Product&quot;: [
+                  {
+                    &quot;@Id&quot;: &quot;p2345999&quot;,
+                    &quot;Amount&quot;: 1,
+                    &quot;OriginalPrice&quot;, 110,
+                    &quot;ListPrice&quot;, 110,
+                    &quot;UsedPoint&quot;, 10,
+                    &quot;BasicPointDiscount&quot;, 10,
+                    &quot;Subtotal&quot;: &quot;90&quot;,
+                    &quot;TaxType&quot;: &quot;Taxable&quot;,
+                    &quot;ProductType&quot;: &quot;Main&quot;,
+                    &quot;_CustomizedProductId&quot;: &quot;X123456&quot;,
+                    &quot;_ProductName&quot;: &quot;\u4fdd\u8b77\u8cbc&quot;,
+                    &quot;_Spec&quot;: &quot;-&quot;
+                  }
+                ]
+              },
+              &quot;OrderPackageDate&quot;: &quot;2010/11/14&quot;,
+              &quot;OrderShippingDate&quot;: &quot;2010/11/14&quot;,
+              &quot;_OrderShippingId&quot;: &quot;X123456&quot;,
+              &quot;PickingDate&quot;: &quot;2010/11/14&quot;,
+              &quot;TransferDate&quot;: &quot;2010/11/11&quot;,
+              &quot;_DeliverType&quot;: &quot;自行運送(99)&quot;,
+              &quot;_OrderNote&quot;: &quot;請在03/0803/08早上到貨&quot;,
+              &quot;_OrderStatus&quot;: &quot;NEW&quot;,
+              &quot;_OrderStatusDesc&quot;: &quot;未結案&quot;
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+<h4 id="xml-sample_4">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Response Status=&quot;ok&quot;&gt;
+      &lt;Transaction Id=&quot;123456&quot;&gt;
+            &lt;SuccessList&gt;
+                  &lt;OrderList Count=&quot;2&quot;&gt;
+                        &lt;Order Id=&quot;YM1234577&quot;&gt;
+                              &lt;TransferDate&gt;2010/11/11&lt;/TransferDate&gt;
+                              &lt;LastShippingDate&gt;2010/11/15&lt;/LastShippingDate&gt;
+                              &lt;OrderShippingDate&gt;2010/11/14&lt;/OrderShippingDate&gt;
+                              &lt;OrderCloseDate&gt;2010/11/16&lt;/OrderCloseDate&gt;
+                              &lt;BuyerConfirmDate&gt;2010/11/15&lt;/BuyerConfirmDate&gt;
+                              &lt;EntryAccountDate&gt;2010/11/15&lt;/EntryAccountDate&gt;
+                              &lt;PickingDate&gt;2010/11/14&lt;/PickingDate&gt;
+                              &lt;OrderPackageDate&gt;2010/11/14&lt;/OrderPackageDate&gt;
+                              &lt;InvoiceNo&gt;WE92904105&lt;/InvoiceNo&gt;
+                              &lt;InvoiveDate&gt;2010/11/15&lt;/InvoiveDate&gt;
+                              &lt;OrderShippingId&gt;&lt;![CDATA[X123456]]&gt;&lt;/OrderShippingId&gt;
+                              &lt;DeliverType&gt;&lt;![CDATA[自行運送(99)]]&gt;&lt;/DeliverType&gt;
+                              &lt;OrderNote&gt;&lt;![CDATA[請在03/0803/08早上到貨]]&gt;&lt;/OrderNote&gt;
+                              &lt;OrderStatus&gt;NEW&lt;/OrderStatus&gt;
+                              &lt;OrderStatusDesc&gt;&lt;![CDATA[未結案]]&gt;&lt;/OrderStatusDesc&gt;
+                              &lt;OrderProductList&gt;
+                                    &lt;Product Id=&quot;p2345677&quot;&gt;
+                                          &lt;CustomizedProductId&gt;&lt;![CDATA[A123456]]&gt;&lt;/CustomizedProductId&gt;
+                                          &lt;ProductType&gt;Main&lt;/ProductType&gt;
+                                          &lt;ProductName&gt;&lt;![CDATA[iphone 4 全配]]&gt;&lt;/ProductName&gt;
+                                          &lt;Spec&gt;&lt;![CDATA[黑色]]&gt;&lt;/Spec&gt;
+                                          &lt;Amount&gt;2&lt;/Amount&gt;
+                                          &lt;OriginalPrice&gt;52000&lt;/OriginalPrice&gt;
+                                          &lt;ListPrice&gt;52000&lt;/ListPrice&gt;
+                                          &lt;UsedPoint&gt;0&lt;/UsedPoint&gt;
+                                          &lt;BasicPointDiscount&gt;0&lt;/BasicPointDiscount&gt;
+                                          &lt;Subtotal&gt;52000&lt;/Subtotal&gt;
+                                          &lt;TaxType&gt;Taxable&lt;/TaxType&gt;
+                                    &lt;/Product&gt;
+                                    &lt;Product Id=&quot;p23456799&quot;&gt;
+                                          &lt;CustomizedProductId&gt;&lt;![CDATA[]]&gt;&lt;/CustomizedProductId&gt;
+                                          &lt;ProductType&gt;Main&lt;/ProductType&gt;
+                                          &lt;ProductName&gt;&lt;![CDATA[iphone 4 皮套]]&gt;&lt;/ProductName&gt;
+                                          &lt;Spec&gt;&lt;![CDATA[白色]]&gt;&lt;/Spec&gt;
+                                          &lt;Amount&gt;2&lt;/Amount&gt;
+                                          &lt;OriginalPrice&gt;0&lt;/OriginalPrice&gt;
+                                          &lt;ListPrice&gt;0&lt;/ListPrice&gt;
+                                          &lt;UsedPoint&gt;0&lt;/UsedPoint&gt;
+                                          &lt;BasicPointDiscount&gt;0&lt;/BasicPointDiscount&gt;
+                                          &lt;Subtotal&gt;0&lt;/Subtotal&gt;
+                                          &lt;TaxType&gt;TaxFree&lt;/TaxType&gt;
+                                    &lt;/Product&gt;
+                              &lt;/OrderProductList&gt;
+                        &lt;/Order&gt;
+                        &lt;Order Id=&quot;YM1234588&quot;&gt;
+                              &lt;TransferDate&gt;2010/11/11&lt;/TransferDate&gt;
+                              &lt;LastShippingDate&gt;2010/11/15&lt;/LastShippingDate&gt;
+                              &lt;OrderShippingDate&gt;2010/11/14&lt;/OrderShippingDate&gt;
+                              &lt;OrderCloseDate&gt;2010/11/16&lt;/OrderCloseDate&gt;
+                              &lt;BuyerConfirmDate&gt;2010/11/15&lt;/BuyerConfirmDate&gt;
+                              &lt;EntryAccountDate&gt;2010/11/15&lt;/EntryAccountDate&gt;
+                              &lt;PickingDate&gt;2010/11/14&lt;/PickingDate&gt;
+                              &lt;OrderPackageDate&gt;2010/11/14&lt;/OrderPackageDate&gt;
+                              &lt;InvoiceNo&gt;WE92904106&lt;/InvoiceNo&gt;
+                              &lt;InvoiveDate&gt;2010/11/15&lt;/InvoiveDate&gt;
+                              &lt;OrderShippingId&gt;&lt;![CDATA[X123456]]&gt;&lt;/OrderShippingId&gt;
+                              &lt;DeliverType&gt;&lt;![CDATA[自行運送(99)]]&gt;&lt;/DeliverType&gt;
+                              &lt;OrderNote&gt;&lt;![CDATA[請在03/0803/08早上到貨]]&gt;&lt;/OrderNote&gt;
+                              &lt;OrderStatus&gt;NEW&lt;/OrderStatus&gt;
+                              &lt;OrderStatusDesc&gt;&lt;![CDATA[未結案]]&gt;&lt;/OrderStatusDesc&gt;
+                              &lt;OrderProductList&gt;
+                                    &lt;Product Id=&quot;p2345999&quot;&gt;
+                                          &lt;CustomizedProductId&gt;&lt;![CDATA[X123456]]&gt;&lt;/CustomizedProductId&gt;
+                                          &lt;ProductName&gt;&lt;![CDATA[保護貼]]&gt;&lt;/ProductName&gt;
+                                          &lt;ProductType&gt;Main&lt;/ProductType&gt;
+                                          &lt;Spec&gt;&lt;![CDATA[-]]&gt;&lt;/Spec&gt;
+                                          &lt;Amount&gt;1&lt;/Amount&gt;
+                                          &lt;OriginalPrice&gt;100&lt;/OriginalPrice&gt;
+                                          &lt;ListPrice&gt;100&lt;/ListPrice&gt;
+                                          &lt;UsedPoint&gt;10&lt;/UsedPoint&gt;
+                                          &lt;BasicPointDiscount&gt;10&lt;/BasicPointDiscount&gt;
+                                          &lt;Subtotal&gt;90&lt;/Subtotal&gt;
+                                          &lt;TaxType&gt;Taxable&lt;/TaxType&gt;
+                                    &lt;/Product&gt;
+                              &lt;/OrderProductList&gt;
+                        &lt;/Order&gt;
+                  &lt;/OrderList&gt;
+            &lt;/SuccessList&gt;
+            &lt;Receiver&gt;
+                  &lt;ReceiverName&gt;
+                        &lt;![CDATA[陳美美]]&gt;
+                  &lt;/ReceiverName&gt;
+                  &lt;ReceiverPhone&gt;
+                        &lt;![CDATA[02-22222222]]&gt;
+                  &lt;/ReceiverPhone&gt;
+                  &lt;ReceiverMobile&gt;
+                        &lt;![CDATA[0911111111]]&gt;
+                  &lt;/ReceiverMobile&gt;
+                  &lt;ReceiverAddress&gt;
+                        &lt;![CDATA[台北市士林區文化路1號]]&gt;
+                  &lt;/ReceiverAddress&gt;
+                  &lt;ReceiverZipcode&gt;
+                        &lt;![CDATA[100]]&gt;
+                  &lt;/ReceiverZipcode&gt;
+            &lt;/Receiver&gt;
+      &lt;/Transaction&gt;
+&lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors_4">Errors</h3>
+<hr />
+<h2 id="v1ordercancel">/v1/Order/Cancel</h2>
+<p>商店執行取消訂單</p>
+<h3 id="request-parameters_5">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>TransactionId
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string
+(Require/15)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>交易序號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderId
+</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string (Require)
+(Require/20)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單編號
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>CancelRemark</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string (Option)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>取消備註</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request：</p>
+<pre><code>https://tw.ews.mall.yahooapis.com/stauth/v1/Order/Cancel?TransactionId=123456&amp;OrderId=YM1234567890123&amp;Format=xml
+                                   OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Order/Cancel?TransactionId=123456&amp;OrderId=YM1234567890123&amp;Format=xml
+</code></pre>
+
+<p>請注意： Order API 使用 https 通訊協定。</p>
+<h3 id="response-fields_5">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>OrderCloseDate</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>訂單結案日期</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ErrorCode</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>錯誤代碼</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ErrorMessage</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>錯誤訊息</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response_5">Sample response</h3>
+<h4 id="json-sample_5">JSON sample</h4>
+<pre><code>{
+    &quot;Response&quot;:
+    {
+        &quot;@Status&quot;:&quot;ok&quot;,
+        &quot;Transaction&quot;:
+        {
+            &quot;@Id&quot;:&quot;123456&quot;,
+            &quot;Order&quot;:
+            {
+               &quot;@Id&quot;:&quot;YM1234567&quot;,
+               &quot;OrderCloseDate&quot;:&quot;2011/11/12&quot;
+            }
+        }
+    }
+}
+</code></pre>
+
+<h4 id="xml-sample_5">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Response Status=&quot;ok&quot;&gt;
+    &lt;Transaction Id=&quot;123456&quot;&gt;
+        &lt;Order Id=&quot;YM1234567&quot;&gt;
+            &lt;OrderCloseDate&gt;2011/11/12&lt;/OrderCloseDate&gt;
+        &lt;/Order&gt;
+    &lt;/Transaction&gt;
+&lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors_5">Errors</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>ErrorCode</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>ErrorMessage</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2701</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>無法取消訂單：不可單獨取消物流服務費</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2702</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>無法取消訂單，請再確認</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2703</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>取消物流服務費發生錯誤</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>2704</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>寄發取消通知信錯誤</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>其他錯誤請參閱<a href="../common_errors/">共用錯誤表</a></p>
+<hr />
+<h2 id="v1ordergetshippingsupplierlist">/v1/Order/GetShippingSupplierList</h2>
+<p>取得目前設定的貨運商代碼對應表,於出貨確認時使用</p>
+<h3 id="response-fields_6">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Code</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>貨運商代碼</p>
+<ul>
+<li>4:新竹</li>
+<li>7:郵局</li>
+<li>9:宅配通</li>
+<li>11:統一宅急便</li>
+<li>12:大榮</li>
+<li>18:便利帶</li>
+<li>99:自行運送</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Name</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>貨運商名稱</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Request：</p>
+<pre><code>https://tw.ews.mall.yahooapis.com/stauth/v1/Order/GetShippingSupplierList?format=xml
+                                   OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Order/GetShippingSupplierList?format=xml
+</code></pre>
+
+<p>請注意： Order API 使用 https 通訊協定。</p>
+<h3 id="sample-response_6">Sample response</h3>
+<h4 id="json-sample_6">JSON sample</h4>
+<pre><code>{
+  &quot;Response&quot;: {
+    &quot;@Status&quot;: &quot;ok&quot;,
+    &quot;ShippingSupplierList&quot;: {
+      &quot;ShippingSupplier&quot;: [
+        {
+          &quot;@Code&quot;: &quot;4&quot;,
+          &quot;_Name&quot;: &quot;\u65b0\u7af9&quot;
+        },
+        {
+          &quot;@ShippingSupplierCode&quot;: &quot;7&quot;,
+          &quot;_Reason&quot;: &quot;\u90f5\u5c40&quot;
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<h4 id="xml-sample_6">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Response Status=&quot;ok&quot;&gt;
+      &lt;ShippingSupplierList&gt;
+            &lt;ShippingSupplier Code=&quot;4&quot;&gt;
+                  &lt;Name&gt;
+                        &lt;![CDATA[新竹]]&gt;
+                  &lt;/Name&gt;
+            &lt;/ShippingSupplier&gt;
+            &lt;ShippingSupplier Code=&quot;7&quot;&gt;
+                  &lt;Name&gt;
+                        &lt;![CDATA[郵局]]&gt;
+                  &lt;/Name&gt;
+            &lt;/ShippingSupplier&gt;
+      &lt;/ShippingSupplierList&gt;
+&lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors_6">Errors</h3>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Product/" title="Product" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Product
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../OrderShipping/" title="OrderShipping" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                OrderShipping
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-7a3ab08b28.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+        <script src="../../search/require.js"></script>
+      
+        <script src="../../search/search.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,144 @@
+//
+// Prostore Open Api
+//
+
+namespace com.yahoo.prostore.oauth;
+name openApi;
+version 1;
+
+include "ParsecResourceError.rdli"
+
+// A category attribute instance.
+type CategoryAttribute Struct {
+
+  // the name of the category attribute.
+  String name;
+
+  // the value of the category attribute.
+  String value;
+}
+
+// A category instance (e.g., 電腦/週邊).
+type Category Struct {
+
+  // the identity number of the category
+  Int64 id (x_required);
+
+  // the name of the category.
+  String name;
+
+  // the breadcrumb path to the category.
+  String path;
+
+  // the level of the category in the whole category tree.
+  Int32 level;
+
+  // if the category is alias of another category.
+  Bool isLink;
+
+  // if the category is the last level of the category path.
+  Bool isLeaf;
+
+  // the identity number of the parent category
+  Int64 parentId;
+
+  // A list of [CategoryAttribute](objects.html#CategoryAttribute).
+  Array<CategoryAttribute> custAttributes;
+}
+
+type Categories Struct {
+  // A list of [Category](objects.html#Category).
+  Array<Category> categories (x_required, x_modifiable, x_not_null);
+
+  // The total number of items in all the pages.
+  Int32 resultsTotal;
+
+  // If there are more items yet to be returned, this value will be present and can be used in the offset parameter to retrieve the next set of items.
+  Int32 nextOffset (x_nullable);
+}
+
+// Returns the category with the specified id.
+resource Category GET "/categories/{id}?fields={fields}" {
+
+  // the identity number of the category
+  Int64 id (x_required);
+
+  // specified to retrieve partial fields, default return all fields
+  String fields (optional);
+
+  expected OK;
+
+  exceptions {
+    ResourceError BAD_REQUEST;  //if the input data is invalid
+    ResourceError NOT_FOUND;    //if the id already exists
+    ResourceError UNAUTHORIZED; //if not authenticated
+    ResourceError FORBIDDEN;    //if not authorized
+    ResourceError INTERNAL_SERVER_ERROR; //if internal server error
+  }
+}
+
+// Returns multiple Categories with the specified ids.
+resource Categories GET "/categories?ids={ids}&fields={fields}" {
+
+  // the identity number of the category
+  String ids (x_required);
+
+  // specified to retrieve partial fields, default return all fields
+  String fields (optional);
+
+  expected OK;
+
+  exceptions {
+    ResourceError BAD_REQUEST;  //if the input data is invalid
+    ResourceError NOT_FOUND;    //if the id already exists
+    ResourceError UNAUTHORIZED; //if not authenticated
+    ResourceError FORBIDDEN;    //if not authorized
+    ResourceError INTERNAL_SERVER_ERROR; //if internal server error
+  }
+}
+
+// Return parent Categories with the specified ids.
+resource Categories GET "/categories/{id}/parents?fields={fields}" {
+
+  // the identity number of the category
+  Int64 id (x_required);
+
+  // specified to retrieve partial fields, default return all fields
+  String fields (optional);
+
+  expected OK;
+
+  exceptions {
+    ResourceError BAD_REQUEST;  //if the input data is invalid
+    ResourceError NOT_FOUND;    //if the id already exists
+    ResourceError UNAUTHORIZED; //if not authenticated
+    ResourceError FORBIDDEN;    //if not authorized
+    ResourceError INTERNAL_SERVER_ERROR; //if internal server error
+  }
+}
+
+// Returns descendants Categories with the specified ids.
+resource Categories GET "/categories/{id}/descendants/{depth}?fields={fields}" {
+
+  // the identity number of the category
+  Int64 id (x_required);
+
+  // specified level of descendant to be returned
+  // 0 = all; 1 = self;
+  Int32 depth (x_required, default=1);
+
+  // specified to retrieve partial fields, default return all fields
+  String fields (optional);
+
+  expected OK;
+
+  exceptions {
+    ResourceError BAD_REQUEST;  //if the input data is invalid
+    ResourceError NOT_FOUND;    //if the id already exists
+    ResourceError UNAUTHORIZED; //if not authenticated
+    ResourceError FORBIDDEN;    //if not authorized
+    ResourceError INTERNAL_SERVER_ERROR; //if internal server error
+  }
+}
+
+

@@ -1,0 +1,37 @@
+//The Gender
+type Gender Enum {
+  NONE, // none
+  MALE, // male
+  FEMALE // female
+}
+
+//The Vendor Status
+ type VendorStatus Enum {
+   NONE, // none
+   ACTIVATE, // ACTIVATE
+   DEACTIVATE // DEACTIVATE
+ }
+
+// The Customer Id
+type CustomerId String (minsize=1, maxsize=30, pattern="^[a-zA-Z0-9]+$");
+
+// The Family Name
+type FamilyName String (minsize=1, maxsize=80);
+
+// The Given Name
+type GivenName String (minsize=1, maxsize=50);
+
+//The Mobile Number
+type MobileNumber String (pattern="+[0-9]{8,15}");
+
+//The Vip Tier
+type VipTier String (minsize=1, maxsize=10);
+
+//The Country Code
+type CountryCode String (pattern="[a-zA-Z]{2}");
+
+//The Vendor id
+type VendorId String (maxsize=20, pattern="^[a-zA-Z0-9]+$");
+
+//The description of supplier
+type Description String (maxsize=128);

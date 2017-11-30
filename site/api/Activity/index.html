@@ -1,0 +1,2186 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-1.7.5">
+    
+    
+      
+        <title>Activity - 超級商城 WebService API Guide</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-769c285a91.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="超級商城 WebService API Guide" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  API
+                </span>
+              
+            
+            Activity
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    超級商城 WebService API Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="超級商城 WebService API Guide" class="md-nav__link">
+      超級商城 WebService API Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      概要
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        概要
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../preface/" title="使用前必讀" class="md-nav__link">
+      使用前必讀
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../auth/" title="使用者認證" class="md-nav__link">
+      使用者認證
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../format/" title="URI・Request・Response 格式" class="md-nav__link">
+      URI・Request・Response 格式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../workflow/" title="作業流程" class="md-nav__link">
+      作業流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apiflow/" title="API 流程" class="md-nav__link">
+      API 流程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../qna/" title="Q & A" class="md-nav__link">
+      Q & A
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common_errors/" title="共通錯誤碼" class="md-nav__link">
+      共通錯誤碼
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../echo/" title="/echo" class="md-nav__link">
+      /echo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MallCategory/" title="MallCategory" class="md-nav__link">
+      MallCategory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StoreCategory/" title="StoreCategory" class="md-nav__link">
+      StoreCategory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StorePayment/" title="StorePayment" class="md-nav__link">
+      StorePayment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StoreShipping/" title="StoreShipping" class="md-nav__link">
+      StoreShipping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Product/" title="Product" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Order/" title="Order" class="md-nav__link">
+      Order
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../OrderShipping/" title="OrderShipping" class="md-nav__link">
+      OrderShipping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Cancel/" title="Cancel" class="md-nav__link">
+      Cancel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Return/" title="Return" class="md-nav__link">
+      Return
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ReturnAbnormality/" title="ReturnAbnormality" class="md-nav__link">
+      ReturnAbnormality
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exchange/" title="Exchange" class="md-nav__link">
+      Exchange
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Activity
+      </label>
+    
+    <a href="./" title="Activity" class="md-nav__link md-nav__link--active">
+      Activity
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v1activitygetlist" title="/v1/Activity/GetList" class="md-nav__link">
+    /v1/Activity/GetList
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1activitygetpromotion" title="/v1/Activity/GetPromotion" class="md-nav__link">
+    /v1/Activity/GetPromotion
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_1" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_1" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_1" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_1" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_1" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_1" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1activitygetecoupon" title="/v1/Activity/GetEcoupon" class="md-nav__link">
+    /v1/Activity/GetEcoupon
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_2" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_2" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_2" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_2" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_2" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_2" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-15" type="checkbox" id="nav-4-15">
+    
+    <label class="md-nav__link" for="nav-4-15">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-15">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../OpenApi/" title="OpenApi" class="md-nav__link">
+      OpenApi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apex_reserved_swaggerui/" title="Swagger UI" class="md-nav__link">
+      Swagger UI
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v1activitygetlist" title="/v1/Activity/GetList" class="md-nav__link">
+    /v1/Activity/GetList
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1activitygetpromotion" title="/v1/Activity/GetPromotion" class="md-nav__link">
+    /v1/Activity/GetPromotion
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_1" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_1" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_1" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_1" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_1" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_1" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1activitygetecoupon" title="/v1/Activity/GetEcoupon" class="md-nav__link">
+    /v1/Activity/GetEcoupon
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters_2" title="Request parameters" class="md-nav__link">
+    Request parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_2" title="Response fields" class="md-nav__link">
+    Response fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_2" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-sample_2" title="JSON sample" class="md-nav__link">
+    JSON sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-sample_2" title="XML sample" class="md-nav__link">
+    XML sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors_2" title="Errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Activity</h1>
+                
+                <h2 id="v1activitygetlist">/v1/Activity/GetList</h2>
+<p>取得商店的活動列表資料</p>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Attribute</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>API Name</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>取得活動列表 (/Activity/GetList)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>API Desc</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>取得活動列表資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Version</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Request URI</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>https://tw.ews.mall.yahooapis.com/stauth/v1/Activity/GetList
+                     OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Activity/GetList</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Change Log</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>*</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-parameters">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityStatus</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string (Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動進行狀態</p>
+<ul>
+<li>All:全部</li>
+<li>NotStart:未開始</li>
+<li>OnGoing:進行中</li>
+<li>Finished:已結束</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string (Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動類型</p>
+<ul>
+<li>Promotion:折扣活動</li>
+<li>Ecoupon:電子折價券</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Position</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>Int(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>由第幾筆開始拿資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Count</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>Int(Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>資料筆數</p>
+<p>Count=1~100</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-fields">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含此商店的活動列表，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+<li>TotalCount: 符合 ActivityStatus, ActivityType 的總資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Activity</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆 Activity 的資料，屬性：</p>
+<ul>
+<li>Id：折扣活動編號(string)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動類型</p>
+<ul>
+<li>Promotion:折扣活動</li>
+<li>Ecoupon:電子折價券</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Title</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動名稱 (string)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Description</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動說明(string)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>SubType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折扣子類</p>
+<p>若ActivityType=ActivityType</p>
+<ul>
+<li>AmountConstrained:滿件型</li>
+<li>PriceConstrained:滿額型</li>
+<li>SingleReceive:領取型</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityStatus</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動進行狀態</p>
+<ul>
+<li>NotStart:未開始</li>
+<li>OnGoing:進行中</li>
+<li>Finished:已結束</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ImageUrl</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>圖片網址</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityUrl</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動網址</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityStartTime</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動開始時間 (timestamp)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityEndTime</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動結束時間 (timestamp)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response">Sample response</h3>
+<h4 id="json-sample">JSON sample</h4>
+<pre><code>{
+  &quot;Response&quot;:{
+    &quot;@Status&quot;:&quot;ok&quot;,
+    &quot;ActivityList&quot;:{
+      &quot;@Count&quot;:2,
+      &quot;@TotalCount&quot;:14,
+      &quot;Activity&quot;:[
+        {
+          &quot;@Id&quot;:&quot;19708&quot;,
+          &quot;@ActivityType&quot;:&quot;Promotion&quot;,
+          &quot;_Title&quot;:&quot;\u8cb73\u4ef6\u6253\u516b\u6298&quot;,
+          &quot;_Description&quot;:&quot;\u8cb7\u6eff3\u4ef6\u6253\u516b\u6298&quot;,
+          &quot;ActivityType&quot;:&quot;Promotion&quot;,
+          &quot;SubType&quot;:&quot;AmountConstrained&quot;,
+          &quot;ActivityStatus&quot;:&quot;NotStart&quot;,
+          &quot;_ImageUrl&quot;:&quot;http://test.yahoo.com/test.jpg&quot;,
+          &quot;_ActivityUrl&quot;:&quot;http://lu1.yahoo.com/store_admin/view/amountPromo?promotion_id=19708&amp;sid=store1&quot;,
+          &quot;ActivityStartTime&quot;:&quot;1327856400&quot;,
+          &quot;ActivityEndTime&quot;:&quot;1327950000&quot;
+        },
+        {
+          &quot;@Id&quot;:&quot;19707&quot;,
+          &quot;@ActivityType&quot;:&quot;Promotion&quot;,
+          &quot;_Title&quot;:&quot;\u6eff1000\u9001100&quot;,
+          &quot;_Description&quot;:&quot;\u8cb7\u6eff1000\u9001100,\n\u8cb7\u6eff2000\u5c31\u9001200&quot;,
+          &quot;ActivityType&quot;:&quot;Promotion&quot;,
+          &quot;SubType&quot;:&quot;PriceConstrained&quot;,
+          &quot;ActivityStatus&quot;:&quot;NotStart&quot;,
+          &quot;_ImageUrl&quot;:&quot;&quot;,
+          &quot;_ActivityUrl&quot;:&quot;http://lu1.yahoo.com/store_admin/view/pricePromo?promotion_id=19707&amp;sid=store1&quot;,
+          &quot;ActivityStartTime&quot;:&quot;1327510800&quot;,
+          &quot;ActivityEndTime&quot;:&quot;1327600800&quot;
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<h4 id="xml-sample">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+    &lt;Response Status=&quot;ok&quot;&gt;
+        &lt;ActivityList Count=&quot;2&quot; TotalCount=&quot;14&quot;&gt;
+            &lt;Activity Id=&quot;19708&quot; ActivityType=&quot;Promotion&quot;&gt;
+                &lt;Title&gt;
+                    &lt;![CDATA[買3件打八折]]&gt;
+                &lt;/Title&gt;
+                &lt;Description&gt;
+                    &lt;![CDATA[買滿3件打八折]]&gt;
+                &lt;/Description&gt;
+                &lt;ActivityType&gt;Promotion&lt;/ActivityType&gt;
+                &lt;SubType&gt;AmountConstrained&lt;/SubType&gt;
+                &lt;ActivityStatus&gt;NotStart&lt;/ActivityStatus&gt;
+                &lt;ImageUrl&gt;
+                    &lt;![CDATA[http://test.yahoo.com/test.jpg]]&gt;
+                &lt;/ImageUrl&gt;
+                &lt;ActivityUrl&gt;
+                    &lt;![CDATA[http://lu1.yahoo.com/store_admin/view/amountPromo?promotion_id=19708&amp;sid=store1]]&gt;
+                &lt;/ActivityUrl&gt;
+                &lt;ActivityStartTime&gt;1327856400&lt;/ActivityStartTime&gt;
+                &lt;ActivityEndTime&gt;1327950000&lt;/ActivityEndTime&gt;
+            &lt;/Activity&gt;
+            &lt;Activity Id=&quot;19707&quot; ActivityType=&quot;Promotion&quot;&gt;
+                &lt;Title&gt;
+                    &lt;![CDATA[滿1000送100]]&gt;
+                &lt;/Title&gt;
+                &lt;Description&gt;
+                    &lt;![CDATA[買滿1000送100,買滿2000就送200]]&gt;
+                &lt;/Description&gt;
+                &lt;ActivityType&gt;Promotion&lt;/ActivityType&gt;
+                &lt;SubType&gt;PriceConstrained&lt;/SubType&gt;
+                &lt;ActivityStatus&gt;NotStart&lt;/ActivityStatus&gt;
+                &lt;ImageUrl&gt;&lt;/ImageUrl&gt;
+                &lt;ActivityUrl&gt;
+                    &lt;![CDATA[http://lu1.yahoo.com/store_admin/view/pricePromo?promotion_id=19707&amp;sid=store1]]&gt;
+                &lt;/ActivityUrl&gt;
+                &lt;ActivityStartTime&gt;1327510800&lt;/ActivityStartTime&gt;
+                &lt;ActivityEndTime&gt;1327600800&lt;/ActivityEndTime&gt;
+            &lt;/Activity&gt;
+        &lt;/ActivityList&gt;
+    &lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors">Errors</h3>
+<p>錯誤請參閱<a href="../common_errors/">共用錯誤表</a></p>
+<hr />
+<h2 id="v1activitygetpromotion">/v1/Activity/GetPromotion</h2>
+<p>取得商店的折扣活動細節</p>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Attribute</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>API Name</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>取得折扣活動細節 (/Activity/GetPromotion)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>API Desc</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>取得折扣活動細節</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Version</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Request URI</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>http://tw.ews.mall.yahooapis.com/stauth/v1/Activity/GetPromotion
+                         OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Activity/GetPromotion</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Change Log</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>*</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-parameters_1">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>PromotionId</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string (Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折扣活動編號</p>
+<p>一次可select多個PromotionId, 最大接受50個</p>
+<p>ex：PromotionId=233&amp;PromotionId=234</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-fields_1">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>PromotionList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含Promotion的資料列表，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Promotion</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆 Promotion 的資料，屬性：</p>
+<ul>
+<li>Id ：折扣活動編號(string)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Title</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動名稱 (string)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Description</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動說明(string)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>SubType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折扣子類</p>
+<ul>
+<li>AmountConstrained:滿件型</li>
+<li>PriceConstrained:滿額型</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityStatus</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動進行狀態</p>
+<ul>
+<li>NotStart:未開始</li>
+<li>OnGoing:進行中</li>
+<li>Finished:已結束</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ImageUrl</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>圖片網址</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityUrl</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動網址</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityStartTime</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動開始時間  (timestamp)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityEndTime</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動結束時間  (timestamp)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>GroupType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動商品型態</p>
+<ul>
+<li>Full:全店商品</li>
+<li>Partial:部份商品</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>IsWithPreviousConstrain</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>是否與其他優惠合併計算(true/false)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>AggregateType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折扣設定累進計算型態</p>
+<ul>
+<li>NotAccumulated:單一折扣設定非累進計算</li>
+<li>Accumulated:單一折扣設定累進計算</li>
+<li>Stepped:多折扣設定計算</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>RuleList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折扣設定列表</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Rule</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆折扣設定資訊</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>PresentType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折抵方式</p>
+<p>若SubType=AmountConstrained時</p>
+<ul>
+<li>Money: 買滿Condition件,折Discount元</li>
+<li>FixMoney: 買滿Condition件,只收固定Discount元</li>
+<li>Percentage: 買滿Condition件,折抵Discount%</li>
+<li>Freebie: 買滿Condition件,送贈品FreebieList</li>
+</ul>
+<p>若SubType=PriceConstrained時</p>
+<ul>
+<li>Money: 買滿Condition元,折Discount元</li>
+<li>Percentage: 買滿Condition元,折抵Discount%</li>
+<li>Freebie: 買滿Condition元,送贈品FreebieList</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Condition</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折扣條件 (number/12,2)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Discount</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折扣數值 (number/12,2)</p>
+<p>若為贈品則 Discount=0</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>FreebieList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>贈品列表，屬性：</p>
+<ul>
+<li>Count：贈品筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Freebie</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>贈品商品，屬性：</p>
+<ul>
+<li>Id：商品編號</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response_1">Sample response</h3>
+<h4 id="json-sample_1">JSON sample</h4>
+<pre><code>{
+  &quot;Response&quot;:{
+    &quot;@Status&quot;:&quot;ok&quot;,
+    &quot;PromotionList&quot;:{
+      &quot;@Count&quot;:2,
+      &quot;Promotion&quot;:[
+        {
+          &quot;@Id&quot;:&quot;19709&quot;,
+          &quot;SubType&quot;:&quot;PriceConstrained&quot;,
+          &quot;_Title&quot;:&quot;\u8cb73000\u9001\u8d08\u54c1&quot;,
+          &quot;_Description&quot;:&quot;\u8cb73000\u5c31\u9001\u8d08\u54c1&quot;,
+          &quot;ActivityStatus&quot;:&quot;NotStart&quot;,
+          &quot;_ImageUrl&quot;:&quot;&quot;,
+          &quot;_ActivityUrl&quot;:&quot;http://lu1.yahoo.com/store_admin/view/pricePromo?promotion_id=19709&amp;sid=store1&quot;,
+          &quot;ActivityStartTime&quot;:&quot;1327255200&quot;,
+          &quot;ActivityEndTime&quot;:&quot;1327348800&quot;,
+          &quot;GroupType&quot;:&quot;Full&quot;,
+          &quot;IsWithPreviousConstrain&quot;:false,
+          &quot;AggregateType&quot;:&quot;NotAccumulated&quot;,
+          &quot;RuleList&quot;:{
+            &quot;@Count&quot;:1,
+            &quot;Rule&quot;:[
+              {
+                &quot;PresentType&quot;:&quot;Freebie&quot;,
+                &quot;Condition&quot;:3000,
+                &quot;Discount&quot;:0,
+                &quot;FreebieList&quot;:{
+                  &quot;@Count&quot;:1,
+                  &quot;Freebie&quot;:[
+                    {
+                      &quot;@Id&quot;:&quot;p09491436394&quot;
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          &quot;@Id&quot;:&quot;19708&quot;,
+          &quot;SubType&quot;:&quot;AmountConstrained&quot;,
+          &quot;_Title&quot;:&quot;\u8cb73\u4ef6\u6253\u516b\u6298&quot;,
+          &quot;_Description&quot;:&quot;\u8cb7\u6eff3\u4ef6\u6253\u516b\u6298&quot;,
+          &quot;ActivityStatus&quot;:&quot;NotStart&quot;,
+          &quot;_ImageUrl&quot;:&quot;http://test.yahoo.com/test.jpg&quot;,
+          &quot;_ActivityUrl&quot;:&quot;http://lu1.yahoo.com/store_admin/view/amountPromo?promotion_id=19708&amp;sid=store1&quot;,
+          &quot;ActivityStartTime&quot;:&quot;1327856400&quot;,
+          &quot;ActivityEndTime&quot;:&quot;1327950000&quot;,
+          &quot;GroupType&quot;:&quot;Full&quot;,
+          &quot;IsWithPreviousConstrain&quot;:true,
+          &quot;AggregateType&quot;:&quot;NotAccumulated&quot;,
+          &quot;RuleList&quot;:{
+            &quot;Rule&quot;:[
+              {
+                &quot;PresentType&quot;:&quot;Percentage&quot;,
+                &quot;Condition&quot;:3,
+                &quot;Discount&quot;:&quot;20.00&quot;,
+                &quot;FreebieList&quot;:{
+                  &quot;@Count&quot;:0
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<h4 id="xml-sample_1">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+    &lt;Response Status=&quot;ok&quot;&gt;
+        &lt;PromotionList Count=&quot;2&quot;&gt;
+            &lt;Promotion Id=&quot;19709&quot;&gt;
+                &lt;SubType&gt;PriceConstrained&lt;/SubType&gt;
+                &lt;Title&gt;
+                    &lt;![CDATA[買3000送贈品]]&gt;
+                &lt;/Title&gt;
+                &lt;Description&gt;
+                    &lt;![CDATA[買3000就送贈品]]&gt;
+                &lt;/Description&gt;
+                &lt;ActivityStatus&gt;NotStart&lt;/ActivityStatus&gt;
+                &lt;ImageUrl&gt;
+                    &lt;![CDATA[]]&gt;
+                &lt;/ImageUrl&gt;
+                &lt;ActivityUrl&gt;
+                    &lt;![CDATA[http://lu1.yahoo.com/store_admin/view/pricePromo?promotion_id=19709&amp;sid=store1]]&gt;
+                &lt;/ActivityUrl&gt;
+                &lt;ActivityStartTime&gt;1327255200&lt;/ActivityStartTime&gt;
+                &lt;ActivityEndTime&gt;1327348800&lt;/ActivityEndTime&gt;
+                &lt;GroupType&gt;Full&lt;/GroupType&gt;
+                &lt;IsWithPreviousConstrain&gt;false&lt;/IsWithPreviousConstrain&gt;
+                &lt;AggregateType&gt;NotAccumulated&lt;/AggregateType&gt;
+                &lt;RuleList Count=&quot;1&quot;&gt;
+                    &lt;Rule&gt;
+                        &lt;PresentType&gt;Freebie&lt;/PresentType&gt;
+                        &lt;Condition&gt;3000&lt;/Condition&gt;
+                        &lt;Discount&gt;0&lt;/Discount&gt;
+                        &lt;FreebieList Count=&quot;1&quot;&gt;
+                            &lt;Freebie Id=&quot;p09491436394&quot;&gt;
+                            &lt;/Freebie&gt;
+                        &lt;/FreebieList&gt;
+                    &lt;/Rule&gt;
+                &lt;/RuleList&gt;
+            &lt;/Promotion&gt;
+            &lt;Promotion Id=&quot;19708&quot;&gt;
+                &lt;SubType&gt;AmountConstrained&lt;/SubType&gt;
+                &lt;Title&gt;
+                    &lt;![CDATA[買3件打八折]]&gt;
+                &lt;/Title&gt;
+                &lt;Description&gt;
+                    &lt;![CDATA[買滿3件打八折]]&gt;
+                &lt;/Description&gt;
+                &lt;ActivityStatus&gt;NotStart&lt;/ActivityStatus&gt;
+                &lt;ImageUrl&gt;
+                    &lt;![CDATA[]]&gt;
+                &lt;/ImageUrl&gt;
+                &lt;ActivityUrl&gt;
+                    &lt;![CDATA[http://lu1.yahoo.com/store_admin/view/amountPromo?promotion_id=19708&amp;sid=store1]]&gt;
+                &lt;/ActivityUrl&gt;
+                &lt;ActivityStartTime&gt;1327856400&lt;/ActivityStartTime&gt;
+                &lt;ActivityEndTime&gt;1327950000&lt;/ActivityEndTime&gt;
+                &lt;GroupType&gt;Full&lt;/GroupType&gt;
+                &lt;IsWithPreviousConstrain&gt;true&lt;/IsWithPreviousConstrain&gt;
+                &lt;AggregateType&gt;NotAccumulated&lt;/AggregateType&gt;
+                &lt;RuleList&gt;
+                    &lt;Rule&gt;
+                        &lt;PresentType&gt;Percentage&lt;/PresentType&gt;
+                        &lt;Condition&gt;3&lt;/Condition&gt;
+                        &lt;Discount&gt;20.00&lt;/Discount&gt;
+                        &lt;FreebieList Count=&quot;0&quot;&gt;
+                        &lt;/FreebieList&gt;
+                    &lt;/Rule&gt;
+                &lt;/RuleList&gt;
+            &lt;/Promotion&gt;
+        &lt;/PromotionList&gt;
+    &lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors_1">Errors</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>ErrorCode</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>ErrorMessage</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>3101</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>查無活動資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>3102</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動編號數量超過上限</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>其他錯誤請參閱<a href="../common_errors/">共用錯誤表</a></p>
+<hr />
+<h2 id="v1activitygetecoupon">/v1/Activity/GetEcoupon</h2>
+<p>取得商店的折價券活動細節</p>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Attribute</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>API Name</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>取得電子折價券活動細節 (/Activity/GetEcoupon)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>API Desc</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>取得電子折價券活動細節</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Version</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Request URI</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>http://tw.ews.mall.yahooapis.com/stauth/v1/Activity/GetEcoupon
+                       OR
+https://tw.ews.mall.yahooapis.com/oauth/v1/Activity/GetEcoupon</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Change Log</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>*</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-parameters_2">Request parameters</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Parameter</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Value</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>EcouponId</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>string (Require)</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折價券活動編號</p>
+<p>一次可select多個EcouponId, 最大接受50個</p>
+<p>ex：EcouponId=233&amp;EcouponId=234</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-fields_2">Response fields</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>Field</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>EcouponList</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含Ecoupon的資料列表，屬性：</p>
+<ul>
+<li>Count：資料筆數</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Ecoupon</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>包含一筆 Ecoupon 的資料，屬性：</p>
+<ul>
+<li>Id：折價券活動編號(string)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Title</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動名稱 (string)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Description</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動說明(string)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>SubType</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折扣子類</p>
+<ul>
+<li>SingleReceive:領取型</li>
+<li>PriceConstrained:滿額型</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>IsShowOnStoreHome</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>是否在首頁顯示(true/false)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityStatus</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動進行狀態</p>
+<ul>
+<li>NotStart:未開始</li>
+<li>OnGoing:進行中</li>
+<li>Finished:已結束</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Money</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>折價券金額 (number/12,2)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ShoppingPrice</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>買滿幾元 (number/12,2)</p>
+<p>(若SubType=SingleReceive 則 ShoppingPrice=0)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ReceiveMaxCount</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>領取上限數量</p>
+<p>(若SubType=PriceConstrained 則  ReceiveMaxCount=0)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ImageUrl</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>圖片網址</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityUrl</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動網址</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityStartTime</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動開始時間 (timestamp)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ActivityEndTime</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動結束時間 (timestamp)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ValidityStartTime</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>電子折價券生效時間  (timestamp)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>ValidityEndTime</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>電子折價券結束時間  (timestamp)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-response_2">Sample response</h3>
+<h4 id="json-sample_2">JSON sample</h4>
+<pre><code>{
+  &quot;Response&quot;:{
+    &quot;@Status&quot;:&quot;ok&quot;,
+    &quot;EcouponList&quot;:{
+      &quot;@Count&quot;:2,
+      &quot;Ecoupon&quot;:[
+        {
+          &quot;@Id&quot;:249,
+          &quot;_Title&quot;:&quot;\u8cb7\u6eff3000\u9001\u6298\u50f9\u5238&quot;,
+          &quot;_Description&quot;:&quot;\u8cb73000\u9001100\u4e0b\u6b21\u7528&quot;,
+          &quot;SubType&quot;:&quot;PriceConstrained&quot;,
+          &quot;IsShowOnStoreHome&quot;:true,
+          &quot;ActivityStatus&quot;:&quot;NotStart&quot;,
+          &quot;Money&quot;:100,
+          &quot;ShoppingPrice&quot;:3000,
+          &quot;ReceiveMaxCount&quot;:0,
+          &quot;_ImageUrl&quot;:&quot;http://test.yahoo.com/test1.jpg&quot;,
+          &quot;_ActivityUrl&quot;:&quot;http://lu1.yahoo.com/store_admin/view/ecouponPromo?promotion_id=249&amp;sid=store1&quot;,
+          &quot;ActivityStartTime&quot;:1327420800,
+          &quot;ActivityEndTime&quot;:1327593599,
+          &quot;ValidityStartTime&quot;:1331049600,
+          &quot;ValidityEndTime&quot;:1331308799
+        },
+        {
+          &quot;@Id&quot;:247,
+          &quot;_Title&quot;:&quot;Title of Ecoupon&quot;,
+          &quot;_Description&quot;:&quot;Description of Ecoupon&quot;,
+          &quot;SubType&quot;:&quot;PriceConstrained&quot;,
+          &quot;IsShowOnStoreHome&quot;:true,
+          &quot;ActivityStatus&quot;:&quot;OnGoing&quot;,
+          &quot;Money&quot;:100,
+          &quot;ShoppingPrice&quot;:1000,
+          &quot;ReceiveMaxCount&quot;:0,
+          &quot;_ImageUrl&quot;:&quot;&quot;,
+          &quot;_ActivityUrl&quot;:&quot;http://lu1.yahoo.com/store_admin/view/ecouponPromo?promotion_id=247&amp;sid=store1&quot;,
+          &quot;ActivityStartTime&quot;:1320814473,
+          &quot;ActivityEndTime&quot;:1325998473,
+          &quot;ValidityStartTime&quot;:1322542473,
+          &quot;ValidityEndTime&quot;:1324270473
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<h4 id="xml-sample_2">XML sample</h4>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+    &lt;Response Status=&quot;ok&quot;&gt;
+        &lt;EcouponList Count=&quot;2&quot;&gt;
+            &lt;Ecoupon Id=&quot;249&quot;&gt;
+                &lt;Title&gt;
+                    &lt;![CDATA[買滿3000送折價券]]&gt;
+                &lt;/Title&gt;
+                &lt;Description&gt;
+                    &lt;![CDATA[買3000送100下次用]]&gt;
+                &lt;/Description&gt;
+                &lt;SubType&gt;PriceConstrained&lt;/SubType&gt;
+                &lt;IsShowOnStoreHome&gt;true&lt;/IsShowOnStoreHome&gt;
+                &lt;ActivityStatus&gt;NotStart&lt;/ActivityStatus&gt;
+                &lt;Money&gt;100&lt;/Money&gt;
+                &lt;SubType&gt;PriceConstrained&lt;/SubType&gt;
+                &lt;SubType&gt;PriceConstrained&lt;/SubType&gt;
+                &lt;IsShowOnStoreHome&gt;true&lt;/IsShowOnStoreHome&gt;
+                &lt;ActivityStatus&gt;OnGoing&lt;/ActivityStatus&gt;
+                &lt;Money&gt;100&lt;/Money&gt;
+                &lt;ShoppingPrice&gt;1000&lt;/ShoppingPrice&gt;
+                &lt;ReceiveMaxCount&gt;0&lt;/ReceiveMaxCount&gt;
+                &lt;ImageUrl&gt;
+                &lt;/ImageUrl&gt;
+                &lt;ActivityUrl&gt;
+                    &lt;![CDATA[http://lu1.yahoo.com/store_admin/view/ecouponPromo?promotion_id=247&amp;sid=store1]]&gt;
+                &lt;/ActivityUrl&gt;
+                &lt;ActivityStartTime&gt;1320814473&lt;/ActivityStartTime&gt;
+                &lt;ActivityEndTime&gt;1325998473&lt;/ActivityEndTime&gt;
+                &lt;ValidityStartTime&gt;1322542473&lt;/ValidityStartTime&gt;
+                &lt;ValidityEndTime&gt;1324270473&lt;/ValidityEndTime&gt;
+            &lt;/Ecoupon&gt;
+        &lt;/EcouponList&gt;
+    &lt;/Response&gt;
+</code></pre>
+
+<h3 id="errors_2">Errors</h3>
+<table>
+<thead>
+<tr>
+<th colspan="1" rowspan="1">
+<p>ErrorCode</p>
+</th>
+<th colspan="1" rowspan="1">
+<p>ErrorMessage</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+<p>3101</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>查無活動資料</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>3102</p>
+</td>
+<td colspan="1" rowspan="1">
+<p>活動編號數量超過上限</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>其他錯誤請參閱<a href="../common_errors/">共用錯誤表</a></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Exchange/" title="Exchange" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Exchange
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../OpenApi/" title="OpenApi" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                OpenApi
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-7a3ab08b28.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+        <script src="../../search/require.js"></script>
+      
+        <script src="../../search/search.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
